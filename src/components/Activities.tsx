@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BookOpen, Users, Sprout, HeartHandshake } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -42,8 +43,8 @@ export const Activities = () => {
           {activities.map((activity, index) => (
             <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col h-full">
               <div className="relative h-48 overflow-hidden">
-                <ImageWithFallback 
-                  src={activity.image} 
+                <ImageWithFallback
+                  src={activity.image}
                   alt={activity.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -66,9 +67,11 @@ export const Activities = () => {
           <p className="text-stone-500 italic mb-8 max-w-2xl mx-auto border-l-4 border-emerald-300 pl-4 py-2 bg-emerald-50 rounded-r-lg">
             Note: All volunteer activities are short-term, unpaid, and based on cultural exchange — not employment.
           </p>
-          <button className="px-8 py-3 bg-stone-800 hover:bg-stone-900 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl">
-            View All Activities
-          </button>
+          <Link to="/activities">
+            <button className="px-8 py-3 bg-stone-800 hover:bg-stone-900 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-xl">
+              See More Activities
+            </button>
+          </Link>
         </div>
       </div>
     </section>
