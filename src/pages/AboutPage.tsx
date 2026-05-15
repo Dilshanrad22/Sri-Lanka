@@ -133,15 +133,15 @@ export const AboutPage = () => {
                             <div className="h-1 w-20 bg-emerald-500 rounded-full"></div>
 
                             <p className="text-stone-600 text-lg leading-relaxed">
-                                We are a family-run homestay and local experience provider in Sri Lanka, created for travelers who want more than just a place to sleep. Our home is not a hotel — it's a place where travelers become part of the family.
+                                Welcome to Sigma House, a peaceful homestay hosted by Hasitha. Created for travelers who want more than just a place to sleep, our home is where you experience the real Sri Lanka.
                             </p>
 
                             <p className="text-stone-600 text-lg leading-relaxed">
-                                For over a decade, we have welcomed guests from more than 25 countries, sharing simple living, local culture, and genuine hospitality. We believe that the best way to experience Sri Lanka is through the eyes of its people.
+                                Our mission is to provide couples and families with an authentic Sri Lankan village experience, featuring warm hospitality, traditional food, and relaxing nature activities.
                             </p>
 
                             <p className="text-stone-600 text-lg leading-relaxed">
-                                Our village, nestled in the beautiful Southern Province, offers a peaceful escape from the tourist crowds. Here, you'll wake up to bird songs, enjoy home-cooked meals, and create memories that last a lifetime.
+                                Located in a serene environment, Sigma House offers a perfect getaway. Wake up to the sounds of nature, enjoy home-cooked meals, and create memories that last a lifetime.
                             </p>
                         </div>
                     </div>

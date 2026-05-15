@@ -499,13 +499,13 @@ export const ExperiencePage = () => {
             <section className="py-20 px-6 bg-stone-50">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">Why Book With Us</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">Why Join Us</h2>
                         <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-6">
                         {[
-                            { icon: Star, title: "Best Prices", desc: "Direct local rates, no middlemen" },
+                            { icon: Star, title: "100% Authentic", desc: "Real local connections" },
                             { icon: Heart, title: "Handpicked", desc: "Curated by our family" },
                             { icon: MapPin, title: "Local Guides", desc: "Experienced local experts" },
                             { icon: Sparkles, title: "Unique Access", desc: "Hidden gems & secret spots" }

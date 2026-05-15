@@ -26,7 +26,6 @@ export const AccommodationPage = () => {
       image:
         "/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.31.jpeg",
       capacity: "2 guests",
-      price: "From $35/night",
       features: [
         "🌳 Elevated treehouse experience",
         "🌅 Stunning panoramic views",
@@ -60,7 +59,6 @@ export const AccommodationPage = () => {
         "Start your day with a traditional Sri Lankan breakfast including hoppers, string hoppers, curry, and fresh tropical fruits.",
       image:
         "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=300&fit=crop&q=80",
-      price: "$5",
     },
     {
       title: "Lunch & Dinner",
@@ -68,7 +66,6 @@ export const AccommodationPage = () => {
         "Enjoy authentic rice and curry with multiple vegetable dishes, prepared fresh daily with local ingredients and spices.",
       image:
         "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop&q=80",
-      price: "$7",
     },
     {
       title: "Cooking Class",
@@ -76,7 +73,6 @@ export const AccommodationPage = () => {
         "Learn to cook traditional Sri Lankan dishes with our family. Take home recipes and memories that last forever.",
       image:
         "https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=400&h=300&fit=crop&q=80",
-      price: "$15",
     },
   ];
 
@@ -131,9 +127,6 @@ export const AccommodationPage = () => {
                       alt={room.name}
                       className="w-full h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 right-4 bg-emerald-600 text-white px-4 py-2 rounded-full font-bold shadow-lg">
-                      {room.price}
-                    </div>
                     <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-white/95 backdrop-blur-sm px-3 py-2 rounded-full shadow-md">
                       <Users size={16} className="text-emerald-600" />
                       <span className="text-sm font-medium text-stone-700">
@@ -436,9 +429,6 @@ export const AccommodationPage = () => {
                     alt={meal.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-emerald-600 text-white px-4 py-1.5 rounded-full font-bold text-sm">
-                    {meal.price}
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-stone-800 mb-2">
@@ -487,7 +477,7 @@ export const AccommodationPage = () => {
 
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
             <p className="text-stone-700 text-lg leading-relaxed">
-              Contact us directly for more information about our rooms, pricing, and to arrange your visit to our homestay.
+              Contact us directly for more information about our rooms and to arrange your visit to our homestay.
             </p>
           </div>
         </div>

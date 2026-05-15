@@ -10,10 +10,10 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">
-              Sri Lanka <span className="text-emerald-500">Volunteer</span>
+              Sigma <span className="text-emerald-500">House</span>
             </h3>
             <p className="text-stone-500 text-sm leading-relaxed">
-              Experience Real Sri Lanka – Live Local, Volunteer with Purpose. Join our family for an unforgettable cultural exchange.
+              Experience Real Sri Lanka – Authentic homestay, traditional food, and peaceful nature experiences for couples and families.
             </p>
           </div>
 
@@ -21,11 +21,11 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="hover:text-emerald-500 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-emerald-500 transition-colors">About Us</a></li>
-              <li><a href="#activities" className="hover:text-emerald-500 transition-colors">Activities</a></li>
-              <li><a href="#experience" className="hover:text-emerald-500 transition-colors">Experience</a></li>
-              <li><a href="#accommodation" className="hover:text-emerald-500 transition-colors">Accommodation</a></li>
+              <li><a href="/about" className="hover:text-emerald-500 transition-colors">About Us</a></li>
+              <li><a href="/rooms" className="hover:text-emerald-500 transition-colors">Rooms & Pricing</a></li>
+              <li><a href="/experiences" className="hover:text-emerald-500 transition-colors">Experiences</a></li>
+              <li><a href="/gallery" className="hover:text-emerald-500 transition-colors">Gallery</a></li>
+              <li><a href="/reviews" className="hover:text-emerald-500 transition-colors">Reviews</a></li>
             </ul>
           </div>
 
@@ -35,15 +35,17 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-emerald-500 shrink-0" />
-                <span>123 Village Road, Southern Province, Sri Lanka</span>
+                <a href="https://share.google/ppy4QVd5QnsnaAz7y" target="_blank" rel="noreferrer" className="hover:text-emerald-500 transition-colors">
+                  Sigma House Location
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-emerald-500 shrink-0" />
-                <span>+94 77 123 4567</span>
+                <span>0763183081</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-emerald-500 shrink-0" />
-                <span>hello@srilankavolunteer.com</span>
+                <a href="mailto:hasithadhananjaya2020@gmail.com" className="hover:text-emerald-500 transition-colors">hasithadhananjaya2020@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -52,14 +54,11 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold text-white mb-6">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all">
+              <a href="https://www.facebook.com/61562298313608/mentions/" target="_blank" rel="noreferrer" className="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all">
+              <a href="https://www.instagram.com/sigmahouse_srilanka/" target="_blank" rel="noreferrer" className="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-stone-900 rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all">
-                <Twitter size={20} />
               </a>
             </div>
           </div>
@@ -67,8 +66,8 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-stone-900 pt-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">© {new Date().getFullYear()} Sri Lanka Volunteer. All rights reserved.</p>
-          <p className="text-emerald-500 font-medium italic">Stay Local. Travel with Purpose.</p>
+          <p className="text-sm">© {new Date().getFullYear()} Sigma House. All rights reserved.</p>
+          <p className="text-emerald-500 font-medium italic">Feel the Warm Hospitality.</p>
         </div>
       </div>
     </footer>
