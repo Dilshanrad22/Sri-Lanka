@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "react-router-dom";
 
 export const AboutSummary = () => {
   return (
@@ -17,10 +18,10 @@ export const AboutSummary = () => {
             <p className="text-stone-600 mb-8 text-lg leading-relaxed">
               We have welcomed guests from over 25 countries, sharing simple living, local culture, and genuine hospitality.
             </p>
-            <button className="text-emerald-600 font-semibold flex items-center gap-2 hover:text-emerald-700 transition-colors group">
+            <Link to="/about" className="inline-flex text-emerald-600 font-semibold items-center gap-2 hover:text-emerald-700 transition-colors group">
               Read More About Us 
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
 
           {/* Image */}

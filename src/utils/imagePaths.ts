@@ -1,16 +1,16 @@
 // Automatically generated file
 export const imagePaths = {
   "Accomodation": [
-    "/images/Accomodation/1 (1).jpeg",
-    "/images/Accomodation/1 (10).jpeg",
-    "/images/Accomodation/1 (2).jpeg",
-    "/images/Accomodation/1 (3).jpeg",
-    "/images/Accomodation/1 (4).jpeg",
-    "/images/Accomodation/1 (5).jpeg",
-    "/images/Accomodation/1 (6).jpeg",
-    "/images/Accomodation/1 (7).jpeg",
-    "/images/Accomodation/1 (8).jpeg",
-    "/images/Accomodation/1 (9).jpeg"
+    "/images/Accomodation/room1.jpeg",
+    "/images/Accomodation/room2.jpeg",
+    "/images/Accomodation/room3.jpeg",
+    "/images/Accomodation/room4.jpeg",
+    "/images/Accomodation/room5.jpeg",
+    "/images/Accomodation/room6.jpeg",
+    "/images/Accomodation/room7.jpeg",
+    "/images/Accomodation/room8.jpeg",
+    "/images/Accomodation/room9.jpeg",
+    "/images/Accomodation/room10.jpeg"
   ],
   "Cooking": [
     "/images/Cooking/1 (1).jpeg",

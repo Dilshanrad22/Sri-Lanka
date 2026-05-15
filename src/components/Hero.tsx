@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion, AnimatePresence } from "motion/react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const images = [
@@ -52,13 +53,13 @@ export const Hero = () => {
           Discover traditional food, peaceful nature, and warm hospitality.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl border border-transparent">
-            Book Now
+          <Link to="/booking" className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl border border-transparent">
+            Request to Volunteer
             <ArrowRight size={20} />
-          </button>
-          <button className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold rounded-full transition-all shadow-md">
+          </Link>
+          <Link to="/experiences" className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold rounded-full transition-all shadow-md">
             View Experiences
-          </button>
+          </Link>
         </div>
       </div>
 

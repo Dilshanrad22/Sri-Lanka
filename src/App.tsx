@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 import { FloatingContactWidget } from "./components/FloatingContactWidget";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
-import { RoomsPage } from "./pages/RoomsPage";
+import { AccommodationPage } from "./pages/AccommodationPage";
 import { ExperiencesPage } from "./pages/ExperiencesPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { ReviewsPage } from "./pages/ReviewsPage";
@@ -21,7 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/rooms" element={<RoomsPage />} />
+            <Route path="/accommodation" element={<AccommodationPage />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />

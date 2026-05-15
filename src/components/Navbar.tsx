@@ -19,7 +19,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Rooms", href: "/rooms" },
+    { name: "Accommodation", href: "/accommodation" },
     { name: "Experiences", href: "/experiences" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "/reviews" },
@@ -47,8 +47,8 @@ export const Navbar = () => {
             
             {/* 1. Logo (Left) */}
             <Link to="/" className="flex items-center gap-3 relative z-50 group">
-              <div className="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center transition-transform group-hover:scale-105">
-                <span className="text-stone-950 font-black text-xl leading-none">S</span>
+              <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105 bg-white border-2 border-emerald-500/50">
+                <img src="/logo/logo.jpeg" alt="Sigma House Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-xl font-bold text-white tracking-wide">
                 Sigma<span className="text-emerald-400 font-medium">House</span>
