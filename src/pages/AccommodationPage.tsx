@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { AnimatedMasonryGallery } from "../components/AnimatedMasonryGallery";
-import { imagePaths } from "../utils/imagePaths";
+import { imagePaths } from "../utils/imagePaths"; // Refreshing paths
 
 export const AccommodationPage = () => {
   const rooms = [
@@ -89,7 +89,7 @@ export const AccommodationPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-800 mb-6 leading-tight">
-              � Sigma House - Tree House Accommodation
+              Sigma House - Tree House Accommodation
             </h1>
 
             <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
@@ -278,10 +278,10 @@ export const AccommodationPage = () => {
           </div>
           <p className="text-2xl md:text-3xl text-white font-medium italic mb-6 leading-relaxed">
             "Many guests say they feel relaxed, safe, and truly at home. This
-            isn't just a place to stay — it's an experience you'll never
+            isn't just a place to stay it's an experience you'll never
             forget."
           </p>
-          <div className="text-emerald-200">— Our Promise</div>
+          <div className="text-emerald-200"> Our Promise</div>
         </div>
       </section>
 
