@@ -35,8 +35,8 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-emerald-500 shrink-0" />
-                <a href="https://share.google/ppy4QVd5QnsnaAz7y" target="_blank" rel="noreferrer" className="hover:text-emerald-500 transition-colors">
-                  Sigma House Location
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Sigma+House+Sri+Lanka" target="_blank" rel="noreferrer" className="hover:text-emerald-500 transition-colors">
+                  Imaduwa, Sri Lanka (View Map)
                 </a>
               </li>
               <li className="flex items-center gap-3">

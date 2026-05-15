@@ -9,31 +9,31 @@ export const GalleryPage = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6">Gallery</h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            Moments captured at Sigma House — from cozy rooms to beautiful nature and traditional experiences.
+            Moments captured at Sigma House  from cozy rooms to beautiful nature and traditional experiences.
           </p>
           <div className="h-1.5 w-24 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto rounded-full mt-6"></div>
         </div>
       </div>
 
-      <AnimatedMasonryGallery 
+      <AnimatedMasonryGallery
         images={imagePaths["Accomodation"] || []}
         title="Our Accommodation"
         subtitle="Relaxing stays in the heart of nature"
       />
 
-      <AnimatedMasonryGallery 
+      <AnimatedMasonryGallery
         images={imagePaths["Experience Cinnomon and Tea"] || []}
         title="Cinnamon & Tea"
         subtitle="Authentic agricultural experiences"
       />
 
-      <AnimatedMasonryGallery 
+      <AnimatedMasonryGallery
         images={imagePaths["Cooking"] || []}
         title="Cooking Experiences"
         subtitle="Delicious Sri Lankan cuisine and family cooking"
       />
 
-      <AnimatedMasonryGallery 
+      <AnimatedMasonryGallery
         images={imagePaths["Volunteering"] || []}
         title="Volunteering"
         subtitle="Making a lasting impact in the community"

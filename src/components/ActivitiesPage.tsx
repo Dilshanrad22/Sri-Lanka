@@ -15,7 +15,8 @@ import {
   Star,
   MapPin,
   CheckCircle,
-import { Camera } from "lucide-react";
+  Camera
+} from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { AnimatedMasonryGallery } from "./AnimatedMasonryGallery";
 import { imagePaths } from "../utils/imagePaths";
@@ -36,8 +37,8 @@ export const ActivitiesPage = () => {
         "Cultural exchange and genuine community bonding",
         "Supporting education in rural areas with limited resources"
       ],
-      vibe: "Transform lives including your own—this is volunteering that truly matters 💙🌍",
-      image: "/images/Volunteering/Volunteering/470167411_122121080138409943_9045576876193799324_n.jpg",
+      vibe: "Transform lives including your own this is volunteering that truly matters 💙🌍",
+      image: imagePaths["Volunteering"] ? imagePaths["Volunteering"][0] : "/images/Volunteering/Volunteering_1.jpeg",
       duration: "Flexible (1 day to several weeks)",
       rating: 5.0
     },
@@ -46,15 +47,15 @@ export const ActivitiesPage = () => {
       emoji: "🍛",
       icon: UtensilsCrossed,
       tagline: "Cook and enjoy traditional Sri Lankan meals",
-      description: "Experience authentic Sri Lankan home cooking with our family. Learn to prepare traditional dishes using fresh village ingredients, clay pots, firewood, and aromatic spices. This is more than cooking—it's a cultural immersion into Sri Lankan culinary heritage.",
+      description: "Experience authentic Sri Lankan home cooking with our family. Learn to prepare traditional dishes using fresh village ingredients, clay pots, firewood, and aromatic spices. This is more than cooking it's a cultural immersion into Sri Lankan culinary heritage.",
       highlights: [
         "Cooking traditional Sri Lankan dishes with our family",
         "Using authentic methods: clay pots, firewood, and local spices",
         "Learning family recipes passed down through generations",
         "Enjoying your homemade meal with traditional hospitality"
       ],
-      vibe: "Not just food—this is culture on a plate 🇱🇰❤️",
-      image: "/images/Cooking/Cooking/468496147_122119571258409943_2283659650382000888_n.jpg",
+      vibe: "Not just food this is culture on a plate 🇱🇰❤️",
+      image: imagePaths["Cooking"] ? imagePaths["Cooking"][0] : "/images/Cooking/Cooking_1.jpeg",
       duration: "3-4 hours",
       rating: 5.0
     },
@@ -70,7 +71,7 @@ export const ActivitiesPage = () => {
         "Drawing, storytelling, and sports"
       ],
       vibe: "A heart-warming experience that supports community bonding 🌈",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80",
+      image: imagePaths["Volunteering"] ? imagePaths["Volunteering"][1] : "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80",
       duration: "2-3 hours",
       rating: 4.9
     },
@@ -117,7 +118,7 @@ export const ActivitiesPage = () => {
         "Visits to local homes and small shops",
         "Insight into village culture, traditions, and lifestyle"
       ],
-      vibe: "This is real Sri Lanka—simple, warm, and unforgettable ❤️",
+      vibe: "This is real Sri Lanka simple, warm, and unforgettable ❤️",
       image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop&q=80",
       duration: "3-4 hours",
       rating: 4.8
@@ -134,7 +135,7 @@ export const ActivitiesPage = () => {
         "Why Sri Lankan cinnamon is the best in the world"
       ],
       vibe: "A rare, hands-on cultural experience 🌍",
-      image: "https://images.unsplash.com/photo-1587334207830-142a22e3f6e1?w=1200&h=800&fit=crop&q=80",
+      image: imagePaths["Experience_Cinnomon_and_Tea"] ? imagePaths["Experience_Cinnomon_and_Tea"][0] : "https://images.unsplash.com/photo-1587334207830-142a22e3f6e1?w=1200&h=800&fit=crop&q=80",
       duration: "2-3 hours",
       rating: 4.7
     },
@@ -150,7 +151,7 @@ export const ActivitiesPage = () => {
         "Tasting freshly brewed tea"
       ],
       vibe: "An iconic Sri Lankan experience you'll never forget ☕🌄",
-      image: "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?w=1200&h=800&fit=crop&q=80",
+      image: imagePaths["Experience_Cinnomon_and_Tea"] ? imagePaths["Experience_Cinnomon_and_Tea"][1] : "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?w=1200&h=800&fit=crop&q=80",
       duration: "Half day",
       rating: 4.9
     }
@@ -273,46 +274,6 @@ export const ActivitiesPage = () => {
         </div>
       </section>
 
-      {/* Why Special Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-white to-emerald-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-gradient-to-br from-emerald-600 to-green-700 rounded-3xl p-10 md:p-16 text-white shadow-2xl relative overflow-hidden">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-
-            <div className="relative z-10">
-              <div className="text-center mb-12">
-                <span className="inline-block text-5xl mb-4">🌍</span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-3">
-                  Why Our Activities Are Special
-                </h2>
-                <p className="text-white/80 max-w-xl mx-auto">
-                  Every experience is designed to create lasting memories and meaningful connections
-                </p>
-              </div>
-
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { icon: Heart, title: "100% Authentic", desc: "Real village lifestyle" },
-                  { icon: Leaf, title: "Eco-Friendly", desc: "Sustainable tourism" },
-                  { icon: Users, title: "Family-Run", desc: "Warm hospitality" },
-                  { icon: MapPin, title: "Hidden Gems", desc: "Off the beaten path" }
-                ].map((item, idx) => (
-                  <div key={idx} className="text-center p-5 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all duration-300">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-white/20 rounded-xl mb-4">
-                      <item.icon size={26} className="text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                    <p className="text-white/70 text-sm">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Volunteering Photo Gallery */}
       <AnimatedMasonryGallery 
         images={imagePaths["Volunteering"] || []}
@@ -331,7 +292,7 @@ export const ActivitiesPage = () => {
 
       {/* Cinnamon & Tea Photo Gallery */}
       <AnimatedMasonryGallery 
-        images={imagePaths["Experience Cinnomon and Tea"] || []}
+        images={imagePaths["Experience_Cinnomon_and_Tea"] || []}
         title="🍃 Cinnamon & Tea Experience"
         subtitle="Step into lush plantations and discover the secrets of Ceylon Cinnamon and Tea"
         tagline="Authentic Sri Lankan agriculture experiences"

@@ -16,6 +16,8 @@ import {
     CheckCircle
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { AnimatedMasonryGallery } from "../components/AnimatedMasonryGallery";
+import { imagePaths } from "../utils/imagePaths";
 
 export const ExperiencePage = () => {
     const experiences = [
@@ -129,11 +131,11 @@ export const ExperiencePage = () => {
                         </div>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-800 mb-6 leading-tight">
-                            🌴 Local Experiences
+                            Local Experiences
                         </h1>
 
                         <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
-                            Discover the best adventures Sri Lanka has to offer — from surfing and safaris to whale watching and hidden waterfalls
+                            Discover the best adventures Sri Lanka has to offer from surfing and safaris to whale watching and hidden waterfalls
                         </p>
 
                         <div className="h-1.5 w-24 bg-gradient-to-r from-emerald-400 to-green-500 mx-auto rounded-full mt-8"></div>
@@ -213,289 +215,14 @@ export const ExperiencePage = () => {
             </section>
 
             {/* Experience Photo Gallery */}
-            <section className="py-20 px-6 bg-gradient-to-b from-white to-stone-50">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">📸 Experience Gallery</h2>
-                        <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full"></div>
-                        <p className="text-stone-600 mt-4 max-w-2xl mx-auto">
-                            Memories captured from our cinnamon and tea plantation experiences
-                        </p>
-                    </div>
+            <AnimatedMasonryGallery 
+                images={imagePaths["Experience_Cinnomon_and_Tea"] || []}
+                title="📸 Experience Gallery"
+                subtitle="Memories captured from our cinnamon and tea plantation experiences"
+                tagline="Real experiences from our cinnamon and tea plantation"
+            />
 
-                    {/* Creative Masonry Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {/* Selection of images with varied sizes */}
-                        <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-xl aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/469634374_122120879546409943_5156431055150299193_n.jpg"
-                                alt="Cinnamon and tea experience"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 via-transparent to-transparent">
-                                <div className="absolute bottom-6 left-6">
-                                    <h3 className="text-white text-2xl font-bold mb-2">Cinnamon & Tea Experience</h3>
-                                    <p className="text-emerald-100 text-sm">Traditional Sri Lankan agriculture</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/469678715_122120877056409943_2285534077948963814_n.jpg"
-                                alt="Experience moment"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/470199182_122121370238409943_1574046129940386924_n.jpg"
-                                alt="Tea plantation"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/470222234_122121370472409943_2713966049993844171_n.jpg"
-                                alt="Traditional farming"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/470525325_122121370352409943_3308597954775398895_n.jpg"
-                                alt="Spice garden"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/475696720_122125821812409943_336958381029012456_n.jpg"
-                                alt="Panoramic experience"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/480578617_122127596900409943_6395177750988918243_n.jpg"
-                                alt="Local guide"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/492024422_122134167518409943_7431208582252656534_n.jpg"
-                                alt="Tea picking"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/492138507_122134167434409943_2956191152411979543_n.jpg"
-                                alt="Vertical experience"
-                                className="w-full h-full min-h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 group-hover:to-black/60 transition-all"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/492251198_122134167116409943_3221700371461600585_n.jpg"
-                                alt="Cinnamon processing"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/493231692_122134167230409943_8892798785037804499_n.jpg"
-                                alt="Harvest time"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/494693247_122135255270409943_4974009590803848926_n.jpg"
-                                alt="Wide plantation view"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/495074991_122135255126409943_3520304033637831462_n.jpg"
-                                alt="Tea leaves"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/495134336_122135255288409943_8119651534309807638_n.jpg"
-                                alt="Garden walk"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/532530156_122143988306409943_2463275340836555631_n.jpg"
-                                alt="Spice demonstration"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/602366247_122152958018409943_1240943487823152764_n.jpg"
-                                alt="Learning experience"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/611246545_122154040646409943_398874378442036317_n.jpg"
-                                alt="Tea estate panorama"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/611606285_122154040958409943_3690864019542004503_n.jpg"
-                                alt="Traditional tools"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/611723770_122154040292409943_2577592586760091756_n.jpg"
-                                alt="Nature walk"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/612013330_122154040466409943_3053961023961883435_n.jpg"
-                                alt="Fresh harvest"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/612019351_122154040508409943_2447472885060151473_n.jpg"
-                                alt="Plantation life"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-01-17 at 20.58.30.jpeg"
-                                alt="Experience activity"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-01-19 at 10.00.45.jpeg"
-                                alt="Guided tour"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-01-30 at 19.38.50.jpeg"
-                                alt="Fresh tea"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-01-30 at 19.41.01.jpeg"
-                                alt="Spice variety"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-02-13 at 18.17.43.jpeg"
-                                alt="Plantation beauty"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-02-13 at 18.17.46.jpeg"
-                                alt="Garden tour"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-
-                        <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-square bg-stone-100">
-                            <ImageWithFallback
-                                src="/images/Experience Cinnomon and Tea/ Experience Cinnomon and Tea/WhatsApp Image 2026-02-13 at 18.17.48 (1).jpeg"
-                                alt="Cultural experience"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-                        </div>
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md">
-                            <Camera size={18} className="text-emerald-600" />
-                            <p className="text-stone-700 font-medium">
-                                Real experiences from our cinnamon and tea plantation
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Book With Us */}
+            {/* Why Join Us */}
             <section className="py-20 px-6 bg-stone-50">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
