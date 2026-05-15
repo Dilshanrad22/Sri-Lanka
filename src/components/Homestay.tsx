@@ -1,6 +1,21 @@
 import React from "react";
 import { ArrowRight, Coffee, Home, Sunset, ShieldCheck } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { AnimatedCarousel } from "./AnimatedCarousel";
+
+const accommodationMedia = [
+  { type: "video" as const, src: "/images/Accomodation/1 (1).mp4" },
+  { type: "image" as const, src: "/images/Accomodation/1 (1).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (2).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (3).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (4).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (5).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (6).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (7).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (8).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (9).jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/1 (10).jpeg" },
+];
 
 export const Homestay = () => {
   return (
@@ -11,7 +26,7 @@ export const Homestay = () => {
           <div className="w-full lg:w-1/2 order-2 lg:order-1">
              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                <ImageWithFallback
-                src="https://images.unsplash.com/photo-1590487426620-e62c929bfe5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTcmklMjBMYW5rYSUyMHNvdXRoZXJuJTIwdmlsbGFnZSUyMGhvbWUlMjBnYXJkZW58ZW58MXx8fHwxNzY5NTM3MjkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/Accomodation/1 (1).jpeg"
                 alt="Southern Village Home Garden"
                 className="w-full h-full object-cover"
               />
@@ -78,6 +93,14 @@ export const Homestay = () => {
           </div>
 
         </div>
+      </div>
+      
+      <div className="mt-20">
+        <AnimatedCarousel 
+          media={accommodationMedia} 
+          title="Our Accommodations" 
+          subtitle="Take a look at where you'll be staying during your unforgettable time with us."
+        />
       </div>
     </section>
   );

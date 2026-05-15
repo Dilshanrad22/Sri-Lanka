@@ -44,20 +44,20 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-          Experience Real Sri Lanka – <br />
-          <span className="text-emerald-400">Live Local, Volunteer with Purpose</span>
+          Welcome to <span className="text-emerald-400">Sigma House</span> <br />
+          Experience Real Sri Lanka
         </h1>
         <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-stone-100 drop-shadow-md">
-          Join a family-run homestay and cultural volunteer experience in Sri Lanka.
-          More than travel — it’s connection.
+          Join us for an authentic homestay experience in Sri Lanka.
+          Discover traditional food, peaceful nature, and warm hospitality.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl border border-transparent">
-            Explore Experiences
+            Book Now
             <ArrowRight size={20} />
           </button>
           <button className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold rounded-full transition-all shadow-md">
-            Contact Us
+            View Experiences
           </button>
         </div>
       </div>

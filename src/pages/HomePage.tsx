@@ -13,11 +13,9 @@ export const HomePage = () => {
         <>
             <Hero />
             <AboutSummary />
-            <Activities />
             <Homestay />
             <LocalExperiences />
             <Location />
-            <Impact />
             <CallToAction />
         </>
     );

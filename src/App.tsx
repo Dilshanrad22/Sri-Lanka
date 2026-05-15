@@ -2,11 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { FloatingContactWidget } from "./components/FloatingContactWidget";
 import { HomePage } from "./pages/HomePage";
-import { ActivitiesDetailPage } from "./pages/ActivitiesDetailPage";
 import { AboutPage } from "./pages/AboutPage";
-import { ExperiencePage } from "./pages/ExperiencePage";
-import { AccommodationPage } from "./pages/AccommodationPage";
+import { RoomsPage } from "./pages/RoomsPage";
+import { ExperiencesPage } from "./pages/ExperiencesPage";
+import { GalleryPage } from "./pages/GalleryPage";
+import { ReviewsPage } from "./pages/ReviewsPage";
+import { BookingPage } from "./pages/BookingPage";
+import { ContactPage } from "./pages/ContactPage";
 
 const App = () => {
   return (
@@ -16,13 +20,17 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/activities" element={<ActivitiesDetailPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/accommodation" element={<AccommodationPage />} />
+            <Route path="/rooms" element={<RoomsPage />} />
+            <Route path="/experiences" element={<ExperiencesPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
+        <FloatingContactWidget />
       </div>
     </Router>
   );
