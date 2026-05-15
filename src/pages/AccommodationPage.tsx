@@ -16,6 +16,8 @@ import {
   Heart,
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { AnimatedMasonryGallery } from "../components/AnimatedMasonryGallery";
+import { imagePaths } from "../utils/imagePaths";
 
 export const AccommodationPage = () => {
   const rooms = [
@@ -23,8 +25,7 @@ export const AccommodationPage = () => {
       name: "Sigma House - Tree House Experience",
       description:
         "Our signature tree house offers an extraordinary stay elevated among the trees. This unique accommodation provides a one-of-a-kind experience where you can connect with nature, wake up to the symphony of tropical birds, and enjoy breathtaking panoramic views of the surrounding countryside. Perfect for couples, adventurers, and nature lovers seeking an unforgettable Sri Lankan experience.",
-      image:
-        "/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.31.jpeg",
+      image: imagePaths["Accomodation"][0],
       capacity: "2 guests",
       features: [
         "🌳 Elevated treehouse experience",
@@ -178,189 +179,8 @@ export const AccommodationPage = () => {
             </p>
           </div>
 
-          {/* Creative Grid Layout with Different Sizes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Large Featured Image */}
-            <div className="md:col-span-2 md:row-span-2">
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl h-full min-h-[400px]">
-                <ImageWithFallback
-                  src="/images/Accomodation/Accomodation/468501588_122119571534409943_5485728862913348140_n.jpg"
-                  alt="Featured accommodation"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 via-transparent to-transparent">
-                  <div className="absolute bottom-6 left-6">
-                    <h3 className="text-white text-2xl font-bold mb-2">Welcome to Our Home</h3>
-                    <p className="text-emerald-100 text-sm">Experience authentic Sri Lankan hospitality</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Standard Images */}
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.30 (1).jpeg"
-                alt="Room view"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.31.jpeg"
-                alt="Comfortable space"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.32.jpeg"
-                alt="Cozy bedroom"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.33.jpeg"
-                alt="Living area"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            {/* Wide Image */}
-            <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 18.17.16.jpeg"
-                alt="Panoramic view"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 18.17.20 (1).jpeg"
-                alt="Interior detail"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[3/4] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 18.17.47.jpeg"
-                alt="Peaceful corner"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            {/* Tall Image */}
-            <div className="md:row-span-2 relative group overflow-hidden rounded-xl shadow-lg bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.16.35.jpeg"
-                alt="Full room view"
-                className="w-full h-full min-h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 group-hover:to-black/60 transition-all"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.45.jpeg"
-                alt="Accommodation feature"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.54 (1).jpeg"
-                alt="Room amenity"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.54.jpeg"
-                alt="Comfortable setting"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="md:col-span-2 relative group overflow-hidden rounded-xl shadow-lg aspect-[16/9] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.55.jpeg"
-                alt="Wide angle room"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent group-hover:from-black/50 transition-all"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.58 (1).jpeg"
-                alt="Bedroom detail"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.58.jpeg"
-                alt="Interior space"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.40.59.jpeg"
-                alt="Room feature"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.41.00 (1).jpeg"
-                alt="Cozy atmosphere"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.41.00.jpeg"
-                alt="Peaceful rest"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] bg-stone-100">
-              <ImageWithFallback
-                src="/images/Accomodation/Accomodation/WhatsApp Image 2026-02-13 at 19.41.01.jpeg"
-                alt="Inviting space"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-            </div>
+          <div className="mt-8">
+            <AnimatedMasonryGallery images={imagePaths["Accomodation"]} />
           </div>
 
           <div className="text-center mt-12">

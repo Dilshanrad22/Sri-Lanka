@@ -2,19 +2,20 @@ import React from "react";
 import { ArrowRight, Coffee, Home, Sunset, ShieldCheck } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { AnimatedCarousel } from "./AnimatedCarousel";
+import { Link } from "react-router-dom";
 
 const accommodationMedia = [
-  { type: "video" as const, src: "/images/Accomodation/1 (1).mp4" },
-  { type: "image" as const, src: "/images/Accomodation/1 (1).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (2).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (3).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (4).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (5).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (6).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (7).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (8).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (9).jpeg" },
-  { type: "image" as const, src: "/images/Accomodation/1 (10).jpeg" },
+  { type: "video" as const, src: "/images/Accomodation/room_video.mp4" },
+  { type: "image" as const, src: "/images/Accomodation/room1.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room2.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room3.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room4.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room5.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room6.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room7.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room8.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room9.jpeg" },
+  { type: "image" as const, src: "/images/Accomodation/room10.jpeg" },
 ];
 
 export const Homestay = () => {
@@ -26,7 +27,7 @@ export const Homestay = () => {
           <div className="w-full lg:w-1/2 order-2 lg:order-1">
              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                <ImageWithFallback
-                src="/images/Accomodation/1 (1).jpeg"
+                src="/images/Accomodation/room1.jpeg"
                 alt="Southern Village Home Garden"
                 className="w-full h-full object-cover"
               />
@@ -85,10 +86,10 @@ export const Homestay = () => {
             </div>
 
             <div className="mt-10">
-               <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+               <Link to="/accommodation" className="inline-flex px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all items-center gap-2 shadow-lg hover:shadow-xl">
                 Accommodation & Meals
                 <ArrowRight size={20} />
-              </button>
+              </Link>
             </div>
           </div>
 
