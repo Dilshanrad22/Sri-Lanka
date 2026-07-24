@@ -15,7 +15,7 @@ export const CallToAction = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a href="/booking" className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-emerald-500/20 text-lg">
+          <a href="https://booking-pearl-phi.vercel.app/" target="_blank" rel="noreferrer" className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-emerald-500/20 text-lg">
             <Calendar size={22} />
             Book Your Stay
           </a>

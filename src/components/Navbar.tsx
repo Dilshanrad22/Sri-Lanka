@@ -77,12 +77,14 @@ export const Navbar = () => {
 
             {/* 3. CTA Button (Right) */}
             <div className="hidden lg:block relative z-50">
-              <Link 
-                to="/booking" 
+              <a
+                href="https://booking-pearl-phi.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
                 className="px-7 py-2.5 rounded-full font-bold text-sm bg-emerald-500 text-stone-950 hover:bg-white hover:text-stone-900 transition-colors duration-300 shadow-lg shadow-emerald-500/20"
               >
                 Book Now
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -125,13 +127,15 @@ export const Navbar = () => {
             </div>
             
             <div className="mt-auto pt-8">
-              <Link 
-                to="/booking" 
+              <a
+                href="https://booking-pearl-phi.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center w-full py-4 bg-emerald-500 hover:bg-white text-stone-950 rounded-full font-bold text-lg transition-colors"
               >
                 Book Now
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
