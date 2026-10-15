@@ -1,11 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+
+const quickLinks = [
+  { name: "Gallery", href: "/gallery" },
+  { name: "Activities & Volunteering", href: "/activities" },
+  { name: "Down South Trips", href: "/south-coast" },
+  { name: "Transport & Rentals", href: "/transport" },
+  { name: "Journal", href: "/journal" },
+  { name: "Guest Stories", href: "/reviews" },
+  { name: "Policies", href: "/policies" },
+];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isExploreOpen, setIsExploreOpen] = useState(false);
+  const exploreRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -16,17 +28,32 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsExploreOpen(false);
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (exploreRef.current && !exploreRef.current.contains(e.target as Node)) {
+        setIsExploreOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Stay", href: "/accommodation" },
     { name: "Experiences", href: "/experiences" },
     { name: "Packages", href: "/packages" },
     { name: "Our Story", href: "/about" },
-    { name: "Journal", href: "/journal" },
     { name: "Contact", href: "/contact" },
   ];
 
   const isOnSubPage = location.pathname !== "/";
+  const isExploreActive = quickLinks.some((link) => link.href === location.pathname);
 
   return (
     <>
@@ -75,6 +102,64 @@ export const Navbar = () => {
                   </Link>
                 );
               })}
+
+              {/* Explore More dropdown */}
+              <div ref={exploreRef} className="relative">
+                <button
+                  onClick={() => setIsExploreOpen((v) => !v)}
+                  className={`relative flex items-center gap-1 whitespace-nowrap py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+                    isExploreActive || isExploreOpen
+                      ? "text-gold-light"
+                      : "text-ivory/75 hover:text-ivory"
+                  }`}
+                >
+                  Explore More
+                  <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-200 ${isExploreOpen ? "rotate-180" : ""}`}
+                  />
+                  {isExploreActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-gold"
+                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                    />
+                  )}
+                </button>
+
+                <AnimatePresence>
+                  {isExploreOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-64 rounded-2xl border border-ivory/10 bg-charcoal/95 backdrop-blur-md shadow-2xl shadow-black/40 p-2"
+                    >
+                      <p className="eyebrow px-4 pt-2 pb-1">Quick Links</p>
+                      <div className="mt-1 flex flex-col">
+                        {quickLinks.map((link) => {
+                          const isActive = location.pathname === link.href;
+                          return (
+                            <Link
+                              key={link.name}
+                              to={link.href}
+                              onClick={() => setIsExploreOpen(false)}
+                              className={`rounded-lg px-4 py-2.5 text-sm transition-colors ${
+                                isActive
+                                  ? "text-gold-light bg-ivory/5"
+                                  : "text-ivory/75 hover:text-ivory hover:bg-ivory/5"
+                              }`}
+                            >
+                              {link.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             {/* 3. CTA Button (Right) */}
@@ -103,7 +188,7 @@ export const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -126,6 +211,27 @@ export const Navbar = () => {
                   </Link>
                 );
               })}
+            </div>
+
+            <div className="mt-10 pt-6 border-t border-ivory/10">
+              <p className="eyebrow mb-4">Quick Links</p>
+              <div className="flex flex-col space-y-4">
+                {quickLinks.map((link) => {
+                  const isActive = location.pathname === link.href;
+                  return (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className={`text-lg transition-colors ${
+                        isActive ? "text-gold-light" : "text-ivory/70 hover:text-ivory"
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="mt-auto pt-8">
