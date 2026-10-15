@@ -29,7 +29,7 @@ export const AboutSummary = () => {
           <Reveal delay={0.1} className="w-full md:w-1/2">
             <div className="grain-texture relative rounded-3xl overflow-hidden shadow-xl shadow-black/30 border border-ivory/10 aspect-video md:aspect-square">
                <ImageWithFallback
-                src="https://images.unsplash.com/photo-1509763988163-d54b5f5d5b67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTcmklMjBMYW5rYW4lMjBmYW1pbHklMjB2aWxsYWdlJTIwc21pbGluZ3xlbnwxfHx8fDE3Njk1MzY0Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/experience-photos/traditional-dancing-ceremony.jpeg"
                 alt="Sri Lankan Family"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />

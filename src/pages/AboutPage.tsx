@@ -65,7 +65,7 @@ export const AboutPage = () => {
                         <Reveal className="w-full lg:w-1/2">
                             <div className="grain-texture rounded-3xl overflow-hidden shadow-2xl border border-ivory/10">
                                 <ImageWithFallback
-                                    src="https://images.unsplash.com/photo-1509763988163-d54b5f5d5b67?w=800&h=600&fit=crop&q=80"
+                                    src="/experience-photos/traditional-dancing-ceremony.jpeg"
                                     alt="Sri Lankan Family"
                                     className="w-full h-80 lg:h-96 object-cover"
                                 />
