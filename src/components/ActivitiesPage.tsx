@@ -2,13 +2,12 @@ import React from "react";
 import {
   Sprout,
   Heart,
-  Footprints,
   Users,
   Leaf,
-  UtensilsCrossed,
   TreePine,
-  Clock,
-  CheckCircle,
+  Bike,
+  Landmark,
+  Music2,
   MapPin
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -19,127 +18,55 @@ import { Reveal } from "./Reveal";
 export const ActivitiesPage = () => {
   const activities = [
     {
-      title: "Volunteering with Village Community",
-      emoji: "❤️",
-      icon: Heart,
-      tagline: "Make a real difference in local children's lives",
-      description: "Become part of our village family and create meaningful impact through education, creativity, and cultural exchange. Help teach English, organize activities, and build lasting connections with village children.",
-      highlights: [
-        "Teaching English and basic education to village children",
-        "Organizing creative activities, sports, games, and art sessions",
-        "Cultural exchange and genuine community bonding",
-        "Supporting education in rural areas with limited resources"
-      ],
-      vibe: "Short-term, unpaid, cultural-exchange volunteering — not employment.",
-      image: imagePaths["Volunteering"] ? imagePaths["Volunteering"][0] : "/images/Volunteering/Volunteering_1.jpeg",
-      duration: "Flexible (1 day to several weeks)",
-    },
-    {
-      title: "Sri Lankan Cultural Cooking",
-      emoji: "🍛",
-      icon: UtensilsCrossed,
-      tagline: "Cook and enjoy traditional Sri Lankan meals",
-      description: "Experience authentic Sri Lankan home cooking with our family. Learn to prepare traditional dishes using fresh village ingredients, clay pots, firewood, and aromatic spices.",
-      highlights: [
-        "Cooking traditional Sri Lankan dishes with our family",
-        "Using authentic methods: clay pots, firewood, and local spices",
-        "Learning family recipes passed down through generations",
-        "Enjoying your homemade meal with traditional hospitality"
-      ],
-      vibe: "A cultural immersion into Sri Lankan culinary heritage.",
-      image: imagePaths["Cooking"] ? imagePaths["Cooking"][0] : "/images/Cooking/Cooking_1.jpeg",
-      duration: "3-4 hours",
-    },
-    {
-      title: "Activities with Village Kids",
-      emoji: "👧👦",
-      icon: Users,
-      tagline: "Spend joyful moments with village children",
-      description: "Experience genuine cultural exchange through games, learning, and meaningful connections that create smiles on both sides.",
-      highlights: [
-        "Traditional outdoor games",
-        "Basic English teaching and fun learning sessions",
-        "Drawing, storytelling, and sports"
-      ],
-      vibe: "A heart-warming way to support community bonding.",
-      image: "/experience-photos/play-with-local-kids.jpeg",
-      duration: "2-3 hours",
-    },
-    {
-      title: "Gardening Experience",
-      emoji: "🌿",
-      icon: Sprout,
-      tagline: "Get your hands dirty and reconnect with nature",
-      description: "Join our family in maintaining a traditional village garden, growing vegetables, fruits, and herbs using eco-friendly methods.",
-      highlights: [
-        "Planting and harvesting local crops",
-        "Learning about Sri Lankan home-garden culture",
-        "Sustainable and organic farming practices"
-      ],
-      vibe: "Calming, educational, and perfect for nature lovers.",
-      image: "/experience-photos/cinnamon-spice-garden.jpeg",
-      duration: "2-3 hours",
-    },
-    {
-      title: "Yoga & Meditation",
+      title: "Yoga in Nature",
       emoji: "🧘",
       icon: Heart,
-      tagline: "Find peace in a quiet village surrounded by greenery",
-      description: "Our yoga and meditation sessions help you relax, reset, and reconnect with yourself.",
-      highlights: [
-        "Morning or sunset yoga sessions",
-        "Guided meditation in a natural environment",
-        "Suitable for beginners and experienced practitioners"
-      ],
-      vibe: "A way to slow down and feel truly present.",
+      description: "Reconnect with yourself through a peaceful yoga session surrounded by Sri Lanka's beautiful greenery and fresh village air.",
       image: "/experience-photos/yoga.jpeg",
-      duration: "1-2 hours",
     },
     {
-      title: "Village Tour",
-      emoji: "🚶",
-      icon: Footprints,
-      tagline: "Explore authentic Sri Lankan village life beyond tourist routes",
-      description: "Walk through paddy fields, meet friendly locals, and discover daily rural traditions. An optional temple visit can be included.",
-      highlights: [
-        "Guided village walk",
-        "Visits to local homes, small shops and a nearby temple",
-        "Insight into village culture, traditions, and lifestyle"
-      ],
-      vibe: "Simple, warm village life — real Sri Lanka.",
-      image: "/experience-photos/temple-visit.jpeg",
-      duration: "3-4 hours",
-    },
-    {
-      title: "Cinnamon Making Experience",
-      emoji: "🌿",
+      title: "Tree House Experience",
+      emoji: "🌳",
       icon: TreePine,
-      tagline: "Discover the secrets of world-famous Ceylon Cinnamon",
-      description: "Learn how cinnamon sticks are prepared using traditional methods passed down through generations.",
-      highlights: [
-        "Cinnamon harvesting and peeling",
-        "Drying and processing techniques",
-        "Why Sri Lankan cinnamon is well regarded worldwide"
-      ],
-      vibe: "A rare, hands-on cultural experience.",
-      image: "/experience-photos/cinnamon-making.jpeg",
-      duration: "2-3 hours",
+      description: "Enjoy a unique village adventure in a traditional-style tree house, surrounded by nature and peaceful landscapes.",
+      image: "/experience-photos/tree-house.jpeg",
     },
     {
-      title: "Tea Picking & Tea Factory Visit",
-      emoji: "🍃",
-      icon: Leaf,
-      tagline: "Step into lush tea plantations and experience Sri Lanka's iconic tea culture",
-      description: "Try tea picking and learn how fresh leaves become world-famous Ceylon Tea.",
-      highlights: [
-        "Tea leaf picking with locals",
-        "Tea factory visit (on request)",
-        "Tasting freshly brewed tea"
-      ],
-      vibe: "An iconic Sri Lankan experience.",
-      image: "/experience-photos/tea-factory-visit.jpeg",
-      duration: "Half day",
-    }
+      title: "Village Cycling Tour",
+      emoji: "🚴",
+      icon: Bike,
+      description: "Explore charming village roads, lush greenery, local homes, and authentic Sri Lankan village life by bicycle.",
+      image: "/experience-photos/village-cycling-tour.jpeg",
+    },
+    {
+      title: "Paddy Field Experience",
+      emoji: "🌾",
+      icon: Sprout,
+      description: "Discover traditional rice farming, walk through beautiful paddy fields, and learn about Sri Lanka's agricultural heritage.",
+      // Placeholder photo — no paddy field photo has been uploaded yet. Swap for a real one when available.
+      image: "https://images.unsplash.com/photo-1536431311719-398b6704d4cc?w=1200&h=800&fit=crop&q=80",
+    },
+    {
+      title: "Temple Visit",
+      emoji: "🛕",
+      icon: Landmark,
+      description: "Visit a local Buddhist temple to discover Sri Lankan spiritual traditions, cultural heritage, and peaceful surroundings.",
+      image: "/experience-photos/temple-visit.jpeg",
+    },
+    {
+      title: "Community Play Experience",
+      emoji: "👧👦",
+      icon: Users,
+      description: "Connect with local children and community members through fun games, shared laughter, and meaningful cultural interactions.",
+      image: "/experience-photos/play-with-local-kids.jpeg",
+    },
+    {
+      title: "Traditional Dancing Ceremony",
+      emoji: "💃",
+      icon: Music2,
+      description: "Experience the vibrant rhythms, colorful costumes, and cultural stories of traditional Sri Lankan dance.",
+      image: "/experience-photos/traditional-dancing-ceremony.jpeg",
+    },
   ];
 
   return (
@@ -188,14 +115,6 @@ export const ActivitiesPage = () => {
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
 
-                    {/* Duration badge */}
-                    <div className="absolute top-4 left-4">
-                      <div className="flex items-center gap-1.5 bg-charcoal/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-ivory/10">
-                        <Clock size={14} className="text-gold-light" />
-                        <span className="text-sm font-medium text-ivory">{activity.duration}</span>
-                      </div>
-                    </div>
-
                     {/* Icon Badge */}
                     <div className="absolute bottom-4 left-4 bg-gold/90 p-3 rounded-xl shadow-lg">
                       <activity.icon size={24} className="text-charcoal" />
@@ -210,40 +129,13 @@ export const ActivitiesPage = () => {
 
                 {/* Content Side */}
                 <Reveal delay={0.1} className="w-full lg:w-1/2 space-y-5">
-                  <div>
-                    <h2 className="font-display text-2xl md:text-3xl text-ivory mb-2">
-                      {activity.title}
-                    </h2>
-                    <p className="text-gold-light font-medium italic">
-                      {activity.tagline}
-                    </p>
-                  </div>
+                  <h2 className="font-display text-2xl md:text-3xl text-ivory">
+                    {activity.title}
+                  </h2>
 
-                  <p className="text-ivory/70 leading-relaxed">
+                  <p className="text-ivory/70 leading-relaxed text-lg">
                     {activity.description}
                   </p>
-
-                  {/* Highlights */}
-                  <div className="space-y-3">
-                    <h3 className="font-semibold text-ivory">
-                      What you'll experience:
-                    </h3>
-                    <ul className="space-y-2">
-                      {activity.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-ivory/70">
-                          <CheckCircle size={18} className="text-gold-light mt-0.5 flex-shrink-0" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Vibe note */}
-                  <div className="bg-gold/10 border-l-4 border-gold p-4 rounded-r-xl">
-                    <p className="text-ivory/80 italic font-medium">
-                      {activity.vibe}
-                    </p>
-                  </div>
                 </Reveal>
               </div>
             ))}
