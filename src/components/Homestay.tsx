@@ -3,6 +3,7 @@ import { ArrowRight, Coffee, Home, Sunset, ShieldCheck } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { AnimatedCarousel } from "./AnimatedCarousel";
 import { Link } from "react-router-dom";
+import { Reveal } from "./Reveal";
 
 const accommodationMedia = [
   { type: "video" as const, src: "/images/Accomodation/room_video.mp4" },
@@ -18,88 +19,67 @@ const accommodationMedia = [
   { type: "image" as const, src: "/images/Accomodation/room10.jpeg" },
 ];
 
+const features = [
+  { icon: Home, title: "Comfortable Living", desc: "Clean, comfortable rooms and a unique tree house experience nestled in nature." },
+  { icon: Sunset, title: "Relaxation & Slow Living", desc: "A calm environment perfect for yoga, meditation, and unwinding at your own pace." },
+  { icon: Coffee, title: "Authentic Meals", desc: "Enjoy delicious, home-cooked Sri Lankan meals prepared with fresh local ingredients." },
+  { icon: ShieldCheck, title: "Safe Atmosphere", desc: "A safe, friendly family atmosphere where you are always welcome." },
+];
+
 export const Homestay = () => {
   return (
-    <section id="accommodation" className="py-20 bg-stone-100">
-      <div className="container mx-auto px-6">
+    <section id="accommodation" className="bg-charcoal py-20 sm:py-28">
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          
-          <div className="w-full lg:w-1/2 order-2 lg:order-1">
-             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+
+          <Reveal className="w-full lg:w-1/2 order-2 lg:order-1">
+             <div className="grain-texture relative rounded-3xl overflow-hidden shadow-xl shadow-black/30 border border-ivory/10">
                <ImageWithFallback
                 src="/images/Accomodation/room1.jpeg"
                 alt="Southern Village Home Garden"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-8">
-                <p className="text-white italic text-lg font-light">
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-charcoal/90 to-transparent p-8">
+                <p className="text-ivory italic text-lg font-light">
                   "Many guests say they feel relaxed, safe, and truly at home."
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-6">Stay Like Family</h2>
-            <div className="h-1 w-20 bg-emerald-500 mb-8 rounded-full"></div>
-            
+          <Reveal delay={0.1} className="w-full lg:w-1/2 order-1 lg:order-2">
+            <p className="eyebrow mb-4">Stay With Us</p>
+            <h2 className="font-display text-3xl md:text-4xl text-ivory mb-8">Stay Like Family</h2>
+
             <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="bg-white p-3 rounded-full shadow-sm h-fit text-emerald-600">
-                  <Home size={24} />
+              {features.map((feature, idx) => (
+                <div key={idx} className="flex gap-4">
+                  <div className="bg-gold/10 p-3 rounded-full h-fit text-gold-light">
+                    <feature.icon size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-ivory mb-2">{feature.title}</h4>
+                    <p className="text-ivory/60">{feature.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold text-stone-800 mb-2">Comfortable Living</h4>
-                  <p className="text-stone-600">Clean, comfortable rooms and a unique tree house experience nestled in nature.</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="bg-white p-3 rounded-full shadow-sm h-fit text-emerald-600">
-                  <Sunset size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-stone-800 mb-2">Relaxation & Yoga</h4>
-                  <p className="text-stone-600">A calm environment perfect for yoga, meditation, and unwinding after a day of volunteering.</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="bg-white p-3 rounded-full shadow-sm h-fit text-emerald-600">
-                  <Coffee size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-stone-800 mb-2">Authentic Meals</h4>
-                  <p className="text-stone-600">Enjoy delicious, home-cooked Sri Lankan meals prepared with fresh local ingredients.</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="bg-white p-3 rounded-full shadow-sm h-fit text-emerald-600">
-                  <ShieldCheck size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-stone-800 mb-2">Safe Atmosphere</h4>
-                  <p className="text-stone-600">A safe, friendly family atmosphere where you are always welcome.</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="mt-10">
-               <Link to="/accommodation" className="inline-flex px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all items-center gap-2 shadow-lg hover:shadow-xl">
-                Accommodation & Meals
+               <Link to="/accommodation" className="btn-terracotta">
+                View the Stay
                 <ArrowRight size={20} />
               </Link>
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </div>
-      
+
       <div className="mt-20">
-        <AnimatedCarousel 
-          media={accommodationMedia} 
-          title="Our Accommodations" 
+        <AnimatedCarousel
+          media={accommodationMedia}
+          title="Our Accommodations"
           subtitle="Take a look at where you'll be staying during your unforgettable time with us."
         />
       </div>

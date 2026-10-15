@@ -11,11 +11,15 @@ import { GalleryPage } from "./pages/GalleryPage";
 import { ReviewsPage } from "./pages/ReviewsPage";
 import { BookingPage } from "./pages/BookingPage";
 import { ContactPage } from "./pages/ContactPage";
+import { PackagesPage } from "./pages/PackagesPage";
+import { TransportPage } from "./pages/TransportPage";
+import { JournalPage } from "./pages/JournalPage";
+import { PoliciesPage } from "./pages/PoliciesPage";
 
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-white font-sans text-stone-900 selection:bg-emerald-200 selection:text-stone-900">
+      <div className="min-h-screen bg-charcoal font-sans text-ivory selection:bg-gold/30 selection:text-ivory">
         <Navbar />
         <main>
           <Routes>
@@ -27,6 +31,10 @@ const App = () => {
             <Route path="/reviews" element={<ReviewsPage />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/packages" element={<PackagesPage />} />
+            <Route path="/transport" element={<TransportPage />} />
+            <Route path="/journal" element={<JournalPage />} />
+            <Route path="/policies" element={<PoliciesPage />} />
           </Routes>
         </main>
         <Footer />

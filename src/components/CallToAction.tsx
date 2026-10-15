@@ -1,29 +1,28 @@
 import React from "react";
 import { Mail, Calendar } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 export const CallToAction = () => {
   return (
-    <section id="contact" className="py-24 bg-stone-900 relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    <section id="contact" className="grain-texture bg-gradient-to-br from-terracotta via-terracotta-light to-gold py-20 text-ivory sm:py-28">
+      <div className="mx-auto w-full max-w-4xl px-5 sm:px-8 text-center relative z-10">
+        <Reveal>
+          <h2 className="font-display text-4xl md:text-5xl mb-6">Let's Plan Your Village Experience</h2>
+          <p className="text-ivory/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+            Tell us your dates and interests — we'll help shape a more personal Sri Lankan village stay.
+          </p>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Stay at Sigma House</h2>
-        <p className="text-stone-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-          Experience authentic Sri Lankan village life, friendly hosting, and traditional food experiences.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <a href="https://booking-pearl-phi.vercel.app/" target="_blank" rel="noreferrer" className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-emerald-500/20 text-lg">
-            <Calendar size={22} />
-            Book Your Stay
-          </a>
-          <a href="/contact" className="px-8 py-4 bg-transparent border-2 border-stone-600 hover:border-white hover:bg-white/5 text-white font-bold rounded-full transition-all flex items-center justify-center gap-3 text-lg">
-            <Mail size={22} />
-            Contact Hasitha
-          </a>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="https://booking-pearl-phi.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 bg-charcoal text-ivory font-semibold text-lg shadow-lg shadow-black/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-charcoal-light">
+              <Calendar size={22} />
+              Plan Your Stay
+            </a>
+            <a href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-ivory/40 px-8 py-4 text-ivory font-semibold text-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-ivory/10">
+              <Mail size={22} />
+              Contact Hasitha
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

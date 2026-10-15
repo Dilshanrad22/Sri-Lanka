@@ -77,7 +77,7 @@ export const FloatingContactWidget = () => {
                 rel="noreferrer"
                 className="group flex items-center gap-3"
               >
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-stone-900 border border-stone-100 text-[15px] tracking-wide font-bold py-1.5 px-4 rounded-xl shadow-lg">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-charcoal text-ivory border border-ivory/15 text-[15px] tracking-wide font-bold py-1.5 px-4 rounded-xl shadow-lg">
                   {option.label}
                 </span>
                 <div
@@ -91,9 +91,14 @@ export const FloatingContactWidget = () => {
         )}
       </AnimatePresence>
 
-      <button
+      <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 rounded-full bg-[#b0c4b1] text-stone-900 flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:scale-105 active:scale-95 hover:bg-[#9cae9d] transition-all duration-300"
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-16 h-16 rounded-full bg-gold text-charcoal flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] hover:bg-gold-light transition-colors duration-300"
       >
         <motion.div
           initial={false}
@@ -102,7 +107,7 @@ export const FloatingContactWidget = () => {
         >
           {isOpen ? <X size={30} strokeWidth={2.5} /> : <ChatBubbleIcon />}
         </motion.div>
-      </button>
+      </motion.button>
     </div>
   );
 };

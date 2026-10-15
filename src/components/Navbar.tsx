@@ -18,58 +18,60 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Accommodation", href: "/accommodation" },
+    { name: "Stay", href: "/accommodation" },
     { name: "Experiences", href: "/experiences" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Reviews", href: "/reviews" },
+    { name: "Packages", href: "/packages" },
+    { name: "Our Story", href: "/about" },
+    { name: "Journal", href: "/journal" },
     { name: "Contact", href: "/contact" },
   ];
 
-  // For this Salumika-inspired design, we will use a consistent dark theme navbar that 
-  // becomes glassmorphic when scrolled.
   const isOnSubPage = location.pathname !== "/";
-  // If we're on a subpage that doesn't have a dark hero, we might need dark text, 
-  // but to match Salumika exactly, the navbar itself is always dark/glassmorphic on scroll.
-  // We'll use a deep dark background when scrolled.
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled || isOnSubPage
-            ? "bg-stone-950/85 backdrop-blur-md border-b border-white/10 py-4 shadow-lg"
-            : "bg-transparent border-transparent py-6"
+            ? "bg-charcoal/90 backdrop-blur-md border-b border-ivory/10 py-4 shadow-lg"
+            : "border-b border-transparent bg-gradient-to-b from-charcoal/70 via-charcoal/30 to-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="flex justify-between items-center">
-            
+
             {/* 1. Logo (Left) */}
             <Link to="/" className="flex items-center gap-3 relative z-50 group">
-              <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105 bg-white border-2 border-emerald-500/50">
+              <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105 bg-white border-2 border-gold/60">
                 <img src="/logo/logo.jpeg" alt="Sigma House Logo" className="w-full h-full object-cover" />
               </div>
-              <span className="text-xl font-bold text-white tracking-wide">
-                Sigma<span className="text-emerald-400 font-medium">House</span>
+              <span className="font-display text-xl text-ivory tracking-wide">
+                Sigma<span className="text-gold-light">House</span>
               </span>
             </Link>
 
             {/* 2. Desktop Navigation (Center) */}
-            <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+            <div className="hidden lg:flex items-center gap-5 xl:gap-7 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.href;
                 return (
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-sm font-medium transition-colors duration-300 ${
-                      isActive 
-                        ? "text-emerald-400" 
-                        : "text-stone-300 hover:text-emerald-400"
+                    className={`relative whitespace-nowrap py-1.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+                      isActive
+                        ? "text-gold-light"
+                        : "text-ivory/75 hover:text-ivory"
                     }`}
                   >
                     {link.name}
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-underline"
+                        className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-gold"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                      />
+                    )}
                   </Link>
                 );
               })}
@@ -81,9 +83,9 @@ export const Navbar = () => {
                 href="https://booking-pearl-phi.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="px-7 py-2.5 rounded-full font-bold text-sm bg-emerald-500 text-stone-950 hover:bg-white hover:text-stone-900 transition-colors duration-300 shadow-lg shadow-emerald-500/20"
+                className="btn-gold px-6! py-2.5! text-sm"
               >
-                Book Now
+                Plan Your Stay
               </a>
             </div>
 
@@ -106,7 +108,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-stone-950 flex flex-col pt-24 px-6 pb-6 overflow-y-auto lg:hidden"
+            className="fixed inset-0 z-40 bg-charcoal flex flex-col pt-24 px-6 pb-6 overflow-y-auto lg:hidden"
           >
             <div className="flex flex-col space-y-6 mt-8">
               {navLinks.map((link) => {
@@ -115,8 +117,8 @@ export const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-3xl font-bold transition-colors ${
-                      isActive ? "text-emerald-400" : "text-stone-300 hover:text-white"
+                    className={`font-display text-3xl transition-colors ${
+                      isActive ? "text-gold-light" : "text-ivory/75 hover:text-ivory"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -125,16 +127,16 @@ export const Navbar = () => {
                 );
               })}
             </div>
-            
+
             <div className="mt-auto pt-8">
               <a
                 href="https://booking-pearl-phi.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center w-full py-4 bg-emerald-500 hover:bg-white text-stone-950 rounded-full font-bold text-lg transition-colors"
+                className="btn-gold w-full"
               >
-                Book Now
+                Plan Your Stay
               </a>
             </div>
           </motion.div>

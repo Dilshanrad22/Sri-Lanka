@@ -33,9 +33,8 @@ export const AnimatedCarousel: React.FC<AnimatedCarouselProps> = ({ media, title
     <div className="w-full relative py-10">
       {(title || subtitle) && (
         <div className="text-center mb-10 px-6">
-          {title && <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mb-4">{title}</h2>}
-          {title && <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-4"></div>}
-          {subtitle && <p className="text-stone-600 max-w-2xl mx-auto">{subtitle}</p>}
+          {title && <h2 className="font-display text-3xl md:text-4xl text-ivory mb-4">{title}</h2>}
+          {subtitle && <p className="text-ivory/60 max-w-2xl mx-auto">{subtitle}</p>}
         </div>
       )}
 
@@ -46,7 +45,7 @@ export const AnimatedCarousel: React.FC<AnimatedCarouselProps> = ({ media, title
               key={idx}
               className="flex-[0_0_85%] sm:flex-[0_0_60%] lg:flex-[0_0_40%] min-w-0 pl-4 sm:pl-6 first:pl-6"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[3/2] group">
+              <div className="grain-texture relative rounded-2xl overflow-hidden shadow-xl border border-ivory/10 aspect-[4/3] sm:aspect-[3/2] group">
                 {item.type === "image" ? (
                   <ImageWithFallback
                     src={item.src}
@@ -73,13 +72,13 @@ export const AnimatedCarousel: React.FC<AnimatedCarouselProps> = ({ media, title
       <div className="flex justify-center gap-4 mt-8">
         <button
           onClick={scrollPrev}
-          className="p-3 rounded-full bg-white text-stone-800 shadow-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors border border-stone-100"
+          className="p-3 rounded-full bg-ivory/10 text-ivory shadow-md hover:bg-gold hover:text-charcoal transition-colors border border-ivory/15"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={scrollNext}
-          className="p-3 rounded-full bg-white text-stone-800 shadow-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors border border-stone-100"
+          className="p-3 rounded-full bg-ivory/10 text-ivory shadow-md hover:bg-gold hover:text-charcoal transition-colors border border-ivory/15"
         >
           <ChevronRight size={24} />
         </button>

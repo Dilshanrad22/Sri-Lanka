@@ -4,8 +4,8 @@ import { AboutSummary } from "../components/AboutSummary";
 import { Activities } from "../components/Activities";
 import { Homestay } from "../components/Homestay";
 import { LocalExperiences } from "../components/Experiences";
+import { WhyChooseUs } from "../components/Impact";
 import { Location } from "../components/Location";
-import { Impact } from "../components/Impact";
 import { CallToAction } from "../components/CallToAction";
 
 export const HomePage = () => {
@@ -13,8 +13,10 @@ export const HomePage = () => {
         <>
             <Hero />
             <AboutSummary />
+            <Activities />
             <Homestay />
             <LocalExperiences />
+            <WhyChooseUs />
             <Location />
             <CallToAction />
         </>
