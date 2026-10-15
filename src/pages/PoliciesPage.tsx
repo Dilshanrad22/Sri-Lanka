@@ -38,7 +38,7 @@ export const PoliciesPage = () => {
         </Reveal>
 
         <Reveal className="bg-gold/10 border border-gold-light/30 text-ivory/70 rounded-2xl px-6 py-4 text-sm text-center mb-12">
-          Working draft — these policies are placeholders and should be reviewed and confirmed by Sigma House
+          Working draft  these policies are placeholders and should be reviewed and confirmed by Sigma House
           (and legal advice where relevant) before the site goes live.
         </Reveal>
 

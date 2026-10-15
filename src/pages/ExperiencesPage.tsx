@@ -22,13 +22,13 @@ import { Reveal } from "../components/Reveal";
 export const ExperiencesPage = () => {
   const experiences = [
     {
-      title: "Village Cooking — Sigma House Nature Kitchen",
+      title: "Village Cooking  Sigma House Nature Kitchen",
       emoji: "🍛",
       icon: UtensilsCrossed,
       tagline: "Cook and enjoy traditional Sri Lankan meals",
       description: "A hands-on introduction to Sri Lankan spices and village cooking techniques. Meet your host, learn about the ingredients, prepare selected dishes together, then sit down to enjoy the meal.",
       duration: "~2 hours",
-      schedule: "Previously planned for Saturdays & Sundays, 10:00 a.m.–12:00 p.m. — confirm before booking",
+      schedule: "Previously planned for Saturdays & Sundays, 10:00 a.m.–12:00 p.m.  confirm before booking",
       price: "Request a quote",
       image: "/experience-photos/village-cooking-nature-kitchen.jpeg",
     },
@@ -39,7 +39,7 @@ export const ExperiencesPage = () => {
       tagline: "Discover ingredients growing in the garden",
       description: "Walk the garden to see cinnamon, pepper, ginger and turmeric where available, and learn how these ingredients find their way into everyday Sri Lankan cooking.",
       duration: "~45–60 min",
-      schedule: "Seasonal — ask us what's currently growing",
+      schedule: "Seasonal  ask us what's currently growing",
       price: "Request a quote",
       image: "/experience-photos/cinnamon-spice-garden.jpeg",
     },
@@ -50,7 +50,7 @@ export const ExperiencesPage = () => {
       tagline: "Step into lush tea plantations",
       description: "A guided outing to a tea factory to understand Ceylon tea production, with time to taste and learn about the plantations.",
       duration: "Half day (incl. transport)",
-      schedule: "Subject to availability — confirm before booking",
+      schedule: "Subject to availability  confirm before booking",
       price: "From LKR 3,500/person (to confirm)",
       image: "/experience-photos/tea-factory-visit.jpeg",
     },
@@ -81,7 +81,7 @@ export const ExperiencesPage = () => {
       emoji: "🎉",
       icon: PartyPopper,
       tagline: "Celebrate culture with traditional fun",
-      description: "Seasonal games typically played during the Sinhala & Tamil New Year — fun for all ages, offered around the April season only.",
+      description: "Seasonal games typically played during the Sinhala & Tamil New Year  fun for all ages, offered around the April season only.",
       duration: "~1 hour",
       schedule: "April season only",
       price: "Included with stay (to confirm)",
@@ -138,9 +138,9 @@ export const ExperiencesPage = () => {
       tagline: "Walk through Sri Lanka's rice fields",
       description: "Discover traditional rice farming, walk through beautiful paddy fields, and learn about Sri Lanka's agricultural heritage.",
       duration: "~1 hour",
-      schedule: "Seasonal — depends on the rice-growing cycle",
+      schedule: "Seasonal  depends on the rice-growing cycle",
       price: "Request a quote",
-      // Placeholder photo — no paddy field photo has been uploaded yet. Swap for a real one when available.
+      // Placeholder photo  no paddy field photo has been uploaded yet. Swap for a real one when available.
       image: "https://images.unsplash.com/photo-1536431311719-398b6704d4cc?w=1200&h=800&fit=crop&q=80",
     },
     {
@@ -188,7 +188,7 @@ export const ExperiencesPage = () => {
               Our Experiences
             </h1>
             <p className="text-lg md:text-xl text-ivory/70 max-w-2xl mx-auto mb-4">
-              Authentic experiences that connect you with Sri Lankan culture and nature — on their own, or combined with your stay.
+              Authentic experiences that connect you with Sri Lankan culture and nature  on their own, or combined with your stay.
             </p>
             <p className="text-sm text-ivory/40 max-w-2xl mx-auto">
               Durations, schedules and prices below are indicative and confirmed by WhatsApp before booking.

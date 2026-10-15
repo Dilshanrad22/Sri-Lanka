@@ -30,7 +30,7 @@ export const LocalExperiences = () => {
           <p className="eyebrow mb-4">Plan Ahead</p>
           <h2 className="font-display text-3xl md:text-4xl text-ivory mb-4">Sample Itineraries</h2>
           <p className="text-ivory/60 max-w-2xl mx-auto text-sm">
-            Sample concepts only — routes, partners and pricing are confirmed with you before booking.
+            Sample concepts only  routes, partners and pricing are confirmed with you before booking.
           </p>
         </Reveal>
 

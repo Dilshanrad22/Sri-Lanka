@@ -30,7 +30,7 @@ export const ActivitiesPage = () => {
         "Cultural exchange and genuine community bonding",
         "Supporting education in rural areas with limited resources"
       ],
-      vibe: "Short-term, unpaid, cultural-exchange volunteering — not employment.",
+      vibe: "Short-term, unpaid, cultural-exchange volunteering  not employment.",
       image: imagePaths["Volunteering"] ? imagePaths["Volunteering"][0] : "/images/Volunteering/Volunteering_1.jpeg",
       duration: "Flexible (1 day to several weeks)",
     },
@@ -106,7 +106,7 @@ export const ActivitiesPage = () => {
         "Visits to local homes, small shops and a nearby temple",
         "Insight into village culture, traditions, and lifestyle"
       ],
-      vibe: "Simple, warm village life — real Sri Lanka.",
+      vibe: "Simple, warm village life  real Sri Lanka.",
       image: "/experience-photos/temple-visit.jpeg",
       duration: "3-4 hours",
     },

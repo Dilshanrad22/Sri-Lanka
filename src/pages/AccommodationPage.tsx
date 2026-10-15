@@ -250,7 +250,7 @@ export const AccommodationPage = () => {
           <Reveal>
             <p className="text-2xl md:text-3xl text-ivory font-light italic mb-6 leading-relaxed font-display">
               "Many guests say they feel relaxed, safe, and truly at home. This
-              isn't just a place to stay — it's an experience you'll never
+              isn't just a place to stay  it's an experience you'll never
               forget."
             </p>
             <div className="text-gold-light eyebrow">Our Promise</div>

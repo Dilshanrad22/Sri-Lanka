@@ -15,7 +15,7 @@ export const AboutPage = () => {
     const values = [
         {
             title: "Authentic Hospitality",
-            description: "We don't run a hotel — we welcome you into our home as family. Experience genuine Sri Lankan warmth.",
+            description: "We don't run a hotel  we welcome you into our home as family. Experience genuine Sri Lankan warmth.",
             icon: Heart
         },
         {
@@ -129,7 +129,7 @@ export const AboutPage = () => {
                         <Quote size={32} className="text-gold-light mx-auto mb-6" />
                         <h2 className="font-display text-3xl md:text-4xl text-ivory mb-4">What Our Guests Say</h2>
                         <p className="text-ivory/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                            We only publish genuine, permissioned guest feedback — see verified reviews on our
+                            We only publish genuine, permissioned guest feedback  see verified reviews on our
                             Google profile, or read guest stories as they're added.
                         </p>
                         <Link to="/reviews" className="btn-gold">

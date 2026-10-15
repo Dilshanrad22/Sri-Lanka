@@ -15,7 +15,7 @@ export const ReviewsPage = () => {
             ))}
           </div>
           <p className="text-lg text-ivory/60 max-w-2xl mx-auto">
-            We only publish genuine, permissioned guest feedback — never invented quotes or ratings.
+            We only publish genuine, permissioned guest feedback  never invented quotes or ratings.
           </p>
         </Reveal>
 
@@ -37,7 +37,7 @@ export const ReviewsPage = () => {
         </Reveal>
 
         <Reveal className="bg-gold/10 border border-gold-light/30 text-ivory/70 rounded-2xl px-6 py-5 text-sm text-center">
-          Guest stories and photos shared with us — with permission — will be added here over time.
+          Guest stories and photos shared with us  with permission  will be added here over time.
           If you've stayed with us and would like your story featured, let us know on WhatsApp.
         </Reveal>
       </div>

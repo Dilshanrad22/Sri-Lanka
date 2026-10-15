@@ -35,13 +35,13 @@ export const PackagesPage = () => {
           <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Packages & Itineraries</h1>
           <p className="text-lg text-ivory/60">
             Flexible plans combining a village stay with cooking, nature, tea, cinnamon and culture.
-            These are sample concepts, not final itineraries — day-by-day details, travel time and pricing
+            These are sample concepts, not final itineraries  day-by-day details, travel time and pricing
             are confirmed with you before booking.
           </p>
         </Reveal>
 
         <Reveal className="bg-gold/10 border border-gold-light/30 text-ivory/70 rounded-2xl px-6 py-4 text-sm max-w-3xl mx-auto mb-16 text-center">
-          Sample itinerary — routes, partners and prices to be confirmed before publishing or booking.
+          Sample itinerary  routes, partners and prices to be confirmed before publishing or booking.
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

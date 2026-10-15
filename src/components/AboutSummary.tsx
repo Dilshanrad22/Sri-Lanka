@@ -14,10 +14,10 @@ export const AboutSummary = () => {
             <p className="eyebrow mb-4">Our Story</p>
             <h2 className="font-display text-3xl md:text-4xl text-ivory mb-6">Hosted Locally, Lived Authentically</h2>
             <p className="text-ivory/70 mb-6 text-lg leading-relaxed">
-              Sigma House is a locally hosted village stay and experience base, created for travelers who want more than just a place to sleep. Our home is not a hotel — it's a place where you connect with everyday Sri Lankan life through food, gardens, people and nature.
+              Sigma House is a locally hosted village stay and experience base, created for travelers who want more than just a place to sleep. Our home is not a hotel  it's a place where you connect with everyday Sri Lankan life through food, gardens, people and nature.
             </p>
             <p className="text-ivory/70 mb-8 text-lg leading-relaxed">
-              We've welcomed guests from many countries, sharing simple village living, local culture and genuine hospitality — and every visit can be tailored to your time, interests and pace.
+              We've welcomed guests from many countries, sharing simple village living, local culture and genuine hospitality  and every visit can be tailored to your time, interests and pace.
             </p>
             <Link to="/about" className="inline-flex text-gold-light font-semibold items-center gap-2 hover:text-gold transition-colors group">
               Read Our Story

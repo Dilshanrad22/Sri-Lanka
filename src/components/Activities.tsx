@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 export const Activities = () => {
   const experiences = [
     {
-      title: "Village Cooking — Nature Kitchen",
+      title: "Village Cooking  Nature Kitchen",
       desc: "Learn Sri Lankan spices and prepare traditional dishes with your host, then share the meal you helped create.",
       image: "/experience-photos/village-cooking-nature-kitchen.jpeg",
       icon: ChefHat,
@@ -38,7 +38,7 @@ export const Activities = () => {
     },
     {
       title: "Tailor-Made Itinerary",
-      desc: "Tell us your dates, pace and interests — we'll help shape a more personal village experience around them.",
+      desc: "Tell us your dates, pace and interests  we'll help shape a more personal village experience around them.",
       image: "/experience-photos/tree-house.jpeg",
       icon: Sparkles,
     },

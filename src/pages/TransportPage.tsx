@@ -11,7 +11,7 @@ export const TransportPage = () => {
           <p className="eyebrow mb-4">Getting Around</p>
           <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Transport & Rentals</h1>
           <p className="text-lg text-ivory/60">
-            Getting around during your stay — tuk-tuk, car or van arrangements, and bike or car rental.
+            Getting around during your stay  tuk-tuk, car or van arrangements, and bike or car rental.
           </p>
         </Reveal>
 
@@ -22,7 +22,7 @@ export const TransportPage = () => {
             </div>
             <h3 className="font-display text-xl text-ivory mb-3">Tuk-Tuk</h3>
             <p className="text-ivory/70 leading-relaxed">
-              May suit a small group — previous planning assumed up to three passengers, depending on luggage
+              May suit a small group  previous planning assumed up to three passengers, depending on luggage
               and local rules. Good for short village and nearby trips.
             </p>
           </Reveal>
@@ -40,7 +40,7 @@ export const TransportPage = () => {
         </div>
 
         <Reveal className="bg-gold/10 border border-gold-light/30 text-ivory/70 rounded-2xl px-6 py-4 text-sm text-center mb-12">
-          Prices, vehicle capacity and insurance/licence terms shown here are placeholders — please confirm
+          Prices, vehicle capacity and insurance/licence terms shown here are placeholders  please confirm
           with Sigma House before relying on them.
         </Reveal>
 

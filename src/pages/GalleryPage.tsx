@@ -11,7 +11,7 @@ export const GalleryPage = () => {
           <p className="eyebrow mb-4">Gallery</p>
           <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Gallery</h1>
           <p className="text-lg text-ivory/60 max-w-2xl mx-auto">
-            Moments captured at Sigma House — from cozy rooms to beautiful nature and traditional experiences.
+            Moments captured at Sigma House  from cozy rooms to beautiful nature and traditional experiences.
           </p>
         </Reveal>
       </div>

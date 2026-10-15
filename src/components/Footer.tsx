@@ -21,7 +21,7 @@ export const Footer = () => {
               </h3>
             </div>
             <p className="text-ivory/70 text-sm leading-relaxed">
-              Experience Authentic Sri Lankan Village Life — local hospitality, traditional cooking, gardens, culture and nature, shaped around you.
+              Experience Authentic Sri Lankan Village Life  local hospitality, traditional cooking, gardens, culture and nature, shaped around you.
             </p>
           </div>
 

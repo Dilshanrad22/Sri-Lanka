@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: Waves,
     title: "Beaches & Coast",
-    desc: "Day trips toward Unawatuna and Weligama for swimming, surfing or watching the sunset — route and timing confirmed with us.",
+    desc: "Day trips toward Unawatuna and Weligama for swimming, surfing or watching the sunset  route and timing confirmed with us.",
   },
   {
     icon: MapPin,
@@ -17,7 +17,7 @@ const highlights = [
   {
     icon: Anchor,
     title: "Mirissa & Ahangama",
-    desc: "Possible extensions toward Mirissa or Ahangama as part of a longer itinerary — ask us what's feasible for your dates.",
+    desc: "Possible extensions toward Mirissa or Ahangama as part of a longer itinerary  ask us what's feasible for your dates.",
   },
 ];
 
@@ -33,7 +33,7 @@ export const Location = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <Reveal className="space-y-8">
             <p className="text-ivory/70 text-lg leading-relaxed">
-              Sigma House sits in Imaduwa, in Sri Lanka's Southern Province — a good base for combining a slower village stay with nearby south-coast highlights, where travel time and routes allow.
+              Sigma House sits in Imaduwa, in Sri Lanka's Southern Province  a good base for combining a slower village stay with nearby south-coast highlights, where travel time and routes allow.
             </p>
 
             <div className="space-y-6">

@@ -2,7 +2,7 @@
 
 :root {
   --font-size: 16px;
-  /* Sigma House brand palette — matched to sigma-nature-kitchen.vercel.app */
+  /* Sigma House brand palette  matched to sigma-nature-kitchen.vercel.app */
   --forest: #1e5c3f;
   --forest-light: #2e7d52;
   --terracotta: #d2672f;
@@ -180,7 +180,7 @@
 }
 
 @layer components {
-  /* Subtle noise overlay — matches the sub-site's grain-texture treatment */
+  /* Subtle noise overlay  matches the sub-site's grain-texture treatment */
   .grain-texture {
     position: relative;
   }

@@ -22,7 +22,7 @@ export const Hero = () => {
 
   return (
     <section id="home" className="relative h-[92vh] min-h-[640px] w-full overflow-hidden text-ivory">
-      {/* Background Slideshow — Ken Burns zoom */}
+      {/* Background Slideshow  Ken Burns zoom */}
       <AnimatePresence initial={false}>
         <motion.div
           key={currentIndex}
@@ -95,7 +95,7 @@ export const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Slide controls — prev / dash indicators / next */}
+      {/* Slide controls  prev / dash indicators / next */}
       <div className="absolute inset-x-0 bottom-7 flex items-center justify-center gap-4 z-20">
         <button
           aria-label="Previous background"

@@ -37,7 +37,7 @@ export const ExperiencePage = () => {
         {
             title: "Whale Watching",
             tagline: "Witness giants of the deep",
-            description: "A morning boat trip from Mirissa with a chance to see whales and dolphins — sightings aren't guaranteed and depend on the season and conditions.",
+            description: "A morning boat trip from Mirissa with a chance to see whales and dolphins  sightings aren't guaranteed and depend on the season and conditions.",
             highlights: [
                 "Seasonal whale & dolphin sightings",
                 "Sunrise boat trips",
@@ -51,7 +51,7 @@ export const ExperiencePage = () => {
         {
             title: "Turtle Conservation",
             tagline: "Learn about protecting endangered species",
-            description: "Visit a turtle conservation project along the southern coast to learn about their work — confirm current programmes and any baby-turtle release activity with us first.",
+            description: "Visit a turtle conservation project along the southern coast to learn about their work  confirm current programmes and any baby-turtle release activity with us first.",
             highlights: [
                 "Conservation education",
                 "Hatchery tours",
@@ -65,7 +65,7 @@ export const ExperiencePage = () => {
         {
             title: "Safari Adventure",
             tagline: "Explore wild Sri Lanka",
-            description: "A jeep safari in Yala or Udawalawe National Park with a chance to spot elephants, leopards and birds — wildlife sightings are never guaranteed.",
+            description: "A jeep safari in Yala or Udawalawe National Park with a chance to spot elephants, leopards and birds  wildlife sightings are never guaranteed.",
             highlights: [
                 "Elephant herds (seasonal)",
                 "Bird watching",
@@ -122,7 +122,7 @@ export const ExperiencePage = () => {
                         </h1>
 
                         <p className="text-lg md:text-xl text-ivory/70 leading-relaxed max-w-2xl mx-auto">
-                            Day-trip ideas from our homestay down south — from surfing and safaris to whale watching and hidden waterfalls. Routes, timing and feasibility confirmed with you first.
+                            Day-trip ideas from our homestay down south  from surfing and safaris to whale watching and hidden waterfalls. Routes, timing and feasibility confirmed with you first.
                         </p>
                     </Reveal>
                 </div>

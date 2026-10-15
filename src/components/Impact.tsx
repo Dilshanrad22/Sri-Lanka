@@ -6,7 +6,7 @@ export const WhyChooseUs = () => {
   const reasons = [
     {
       title: "Personal Hosting",
-      desc: "You stay with a local host, not a front desk — questions get answered directly, before and during your trip.",
+      desc: "You stay with a local host, not a front desk  questions get answered directly, before and during your trip.",
       icon: Heart,
     },
     {
@@ -16,12 +16,12 @@ export const WhyChooseUs = () => {
     },
     {
       title: "Flexible Itineraries",
-      desc: "Tell us your dates, pace and interests — stays and experiences can be combined to fit your trip.",
+      desc: "Tell us your dates, pace and interests  stays and experiences can be combined to fit your trip.",
       icon: Sparkles,
     },
     {
       title: "Direct Communication",
-      desc: "Reach us on WhatsApp for questions, availability and planning — no call centre in between.",
+      desc: "Reach us on WhatsApp for questions, availability and planning  no call centre in between.",
       icon: MessageCircle,
     },
   ];

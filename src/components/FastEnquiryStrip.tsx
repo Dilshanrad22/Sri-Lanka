@@ -91,7 +91,7 @@ export const FastEnquiryStrip = () => {
           </a>
         </div>
         <p className="text-center text-ivory/50 text-xs mt-3">
-          We'll confirm availability and the final price by WhatsApp or email — no payment required to enquire.
+          We'll confirm availability and the final price by WhatsApp or email  no payment required to enquire.
         </p>
       </div>
     </section>

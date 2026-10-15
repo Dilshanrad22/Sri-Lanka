@@ -9,7 +9,7 @@ export const CallToAction = () => {
         <Reveal>
           <h2 className="font-display text-4xl md:text-5xl mb-6">Let's Plan Your Village Experience</h2>
           <p className="text-ivory/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Tell us your dates and interests — we'll help shape a more personal Sri Lankan village stay.
+            Tell us your dates and interests  we'll help shape a more personal Sri Lankan village stay.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

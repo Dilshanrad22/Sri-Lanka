@@ -12,7 +12,7 @@ const EXPERIENCE_OPTIONS = [
   "Tailor-Made Itinerary",
 ];
 
-const TRANSPORT_OPTIONS = ["Not needed", "Tuk-tuk", "Car / Van", "Not sure — advise me"];
+const TRANSPORT_OPTIONS = ["Not needed", "Tuk-tuk", "Car / Van", "Not sure  advise me"];
 
 const inputClass =
   "w-full px-4 py-3 rounded-xl border border-ivory/15 focus:border-gold focus:ring-gold/20 bg-ivory/5 text-ivory outline-none transition-all";
@@ -28,7 +28,7 @@ export const BookingPage = () => {
     email: "",
     experiences: [] as string[],
     dietary: "",
-    transport: "Not sure — advise me",
+    transport: "Not sure  advise me",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -74,7 +74,7 @@ export const BookingPage = () => {
   };
 
   const handleEmailRequest = () => {
-    const subject = encodeURIComponent("Booking Enquiry — Sigma House Sri Lanka");
+    const subject = encodeURIComponent("Booking Enquiry  Sigma House Sri Lanka");
     const body = encodeURIComponent(buildSummary());
     window.location.href = `mailto:hasithadhananjaya2020@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
@@ -96,7 +96,7 @@ export const BookingPage = () => {
           <div className="flex items-center gap-3 bg-forest-light/15 border border-forest-light/30 text-ivory rounded-2xl px-6 py-4 mb-8">
             <CheckCircle2 size={22} className="shrink-0 text-gold-light" />
             <p className="text-sm">
-              Thanks! Your enquiry details are ready — if WhatsApp didn't open automatically, please
+              Thanks! Your enquiry details are ready  if WhatsApp didn't open automatically, please
               send the message manually, or we'll reply to the email you provided.
             </p>
           </div>
@@ -202,7 +202,7 @@ export const BookingPage = () => {
           </div>
 
           <p className="text-xs text-ivory/40 mb-6">
-            Your details are used only to respond to this enquiry and arrange your stay — see our{" "}
+            Your details are used only to respond to this enquiry and arrange your stay  see our{" "}
             <a href="/policies" className="underline hover:text-gold-light">Policies</a> page for details.
           </p>
 
