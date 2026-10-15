@@ -24,7 +24,7 @@ export const ExperiencesPage = () => {
       duration: "~2 hours",
       schedule: "Previously planned for Saturdays & Sundays, 10:00 a.m.–12:00 p.m. — confirm before booking",
       price: "Request a quote",
-      image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/village-cooking-nature-kitchen.jpeg",
     },
     {
       title: "Cinnamon & Spice Garden",
@@ -35,7 +35,7 @@ export const ExperiencesPage = () => {
       duration: "~45–60 min",
       schedule: "Seasonal — ask us what's currently growing",
       price: "Request a quote",
-      image: "https://images.unsplash.com/photo-1455853828816-0c301a011711?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/cinnamon-spice-garden.jpeg",
     },
     {
       title: "Tea Factory Visit",
@@ -46,7 +46,7 @@ export const ExperiencesPage = () => {
       duration: "Half day (incl. transport)",
       schedule: "Subject to availability — confirm before booking",
       price: "From LKR 3,500/person (to confirm)",
-      image: "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/tea-factory-visit.jpeg",
     },
     {
       title: "Waterfall & Nature Outing",
@@ -57,7 +57,7 @@ export const ExperiencesPage = () => {
       duration: "Half day",
       schedule: "Weather dependent",
       price: "Request a quote",
-      image: "https://images.unsplash.com/photo-1703566567802-e1945c83f0cb?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/waterfall-nature-outing.jpeg",
     },
     {
       title: "Village & Culture Walk",
@@ -68,7 +68,7 @@ export const ExperiencesPage = () => {
       duration: "~1.5 hours",
       schedule: "Available most days",
       price: "Request a quote",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/village-culture-walk.jpeg",
     },
     {
       title: "Sri Lankan New Year Games",
@@ -79,7 +79,7 @@ export const ExperiencesPage = () => {
       duration: "~1 hour",
       schedule: "April season only",
       price: "Included with stay (to confirm)",
-      image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/new-year-games.jpeg",
     },
     {
       title: "Family-Friendly Activities",
@@ -90,7 +90,7 @@ export const ExperiencesPage = () => {
       duration: "Flexible",
       schedule: "On request",
       price: "Request a quote",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/play-with-local-kids.jpeg",
     }
   ];
 

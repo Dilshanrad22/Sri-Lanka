@@ -22,7 +22,7 @@ export const AccommodationPage = () => {
       name: "Sigma House - Tree House Experience",
       description:
         "Our signature tree house offers an extraordinary stay elevated among the trees. This unique accommodation provides a one-of-a-kind experience where you can connect with nature, wake up to the symphony of tropical birds, and enjoy breathtaking panoramic views of the surrounding countryside. Perfect for couples, adventurers, and nature lovers seeking an unforgettable Sri Lankan experience.",
-      image: imagePaths["Accomodation"][0],
+      image: "/experience-photos/tree-house.jpeg",
       capacity: "2 guests",
       features: [
         "🌳 Elevated treehouse experience",

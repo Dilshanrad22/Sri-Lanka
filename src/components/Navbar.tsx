@@ -43,7 +43,7 @@ export const Navbar = () => {
             {/* 1. Logo (Left) */}
             <Link to="/" className="flex items-center gap-3 relative z-50 group">
               <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center transition-transform group-hover:scale-105 bg-white border-2 border-gold/60">
-                <img src="/logo/logo.jpeg" alt="Sigma House Logo" className="w-full h-full object-cover" />
+                <img src="/logo/sigma-house-logo.png" alt="Sigma House Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-display text-xl text-ivory tracking-wide">
                 Sigma<span className="text-gold-light">House</span>

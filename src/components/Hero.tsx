@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const images = [
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920",
-    "https://images.unsplash.com/photo-1760532511219-c8b7566f90af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTcmklMjBMYW5rYSUyMGx1c2glMjBncmVlbiUyMHRlYSUyMHBsYW50YXRpb258ZW58MXx8fHwxNzY5NTM3NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    "https://images.unsplash.com/photo-1703566567802-e1945c83f0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTcmklMjBMYW5rYSUyMGp1bmdsZSUyMHdhdGVyZmFsbHxlbnwxfHx8fDE3Njk1Mzc0NDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    "https://images.unsplash.com/photo-1594476191313-c2a8d227ce61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTcmklMjBMYW5rYSUyMGJlYWNoJTIwcGFsbSUyMHRyZWVzfGVufDF8fHx8MTc2OTUzNjQ2N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    "/banner/banner1.jpeg",
+    "/banner/banner2.jpeg",
+    "/banner/banner3.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

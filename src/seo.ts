@@ -179,6 +179,42 @@ export const seoRoutes: SeoRoute[] = [
     priority: 0.7,
     changeFrequency: "yearly",
   },
+  {
+    path: "/packages",
+    title: "Sri Lanka Village Stay Packages & Itineraries | Sigma House",
+    description:
+      "Sample 2, 3, 5 and 7 day itineraries combining a village homestay with cooking, cinnamon, tea and nature experiences near Galle, Sri Lanka.",
+    keywords: ["Sri Lanka village stay package", "Sri Lanka itinerary", "homestay itinerary Sri Lanka"],
+    priority: 0.7,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/transport",
+    title: "Transport & Rentals Near Galle, Sri Lanka | Sigma House",
+    description:
+      "Tuk-tuk, car and van transport options for getting around during your village homestay near Galle, Sri Lanka.",
+    keywords: ["tuk-tuk Sri Lanka", "transport Galle Sri Lanka", "car rental Sri Lanka"],
+    priority: 0.5,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/journal",
+    title: "Sri Lanka Travel Journal & Guides | Sigma House",
+    description:
+      "Sri Lanka guides, food stories and practical trip-planning notes from Sigma House, a village homestay near Galle.",
+    keywords: ["Sri Lanka travel guide", "Sri Lanka food guide"],
+    priority: 0.5,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/policies",
+    title: "Policies | Sigma House Sri Lanka",
+    description:
+      "Booking, cancellation, privacy and responsible tourism policies for a stay at Sigma House, a village homestay near Galle, Sri Lanka.",
+    keywords: ["Sigma House policies"],
+    priority: 0.3,
+    changeFrequency: "yearly",
+  },
 ];
 
 export function findSeoRoute(pathname: string) {
@@ -201,7 +237,7 @@ export function buildJsonLd(siteUrl: string, natureKitchenUrl?: string) {
       name: siteName,
       description: seoRoutes[0].description,
       url: siteUrl,
-      logo: `${siteUrl}/logo/logo.jpeg`,
+      logo: `${siteUrl}/logo/sigma-house-logo.png`,
       image: `${siteUrl}${defaultImage.path}`,
       telephone: "+94763183081",
       email: "hasithadhananjaya2020@gmail.com",

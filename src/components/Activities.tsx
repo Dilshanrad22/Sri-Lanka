@@ -9,37 +9,37 @@ export const Activities = () => {
     {
       title: "Village Cooking — Nature Kitchen",
       desc: "Learn Sri Lankan spices and prepare traditional dishes with your host, then share the meal you helped create.",
-      image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/village-cooking-nature-kitchen.jpeg",
       icon: ChefHat,
     },
     {
       title: "Cinnamon & Spice Garden",
       desc: "Walk the garden to see cinnamon, pepper, ginger and turmeric growing, and how they find their way into everyday cooking.",
-      image: "https://images.unsplash.com/photo-1455853828816-0c301a011711?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/cinnamon-spice-garden.jpeg",
       icon: Leaf,
     },
     {
       title: "Tea Factory Visit",
       desc: "A guided outing to understand Ceylon tea production, with time to taste and learn about the plantations.",
-      image: "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/tea-factory-visit.jpeg",
       icon: Coffee,
     },
     {
       title: "Nature & Waterfalls",
       desc: "Locally guided visits to nearby waterfalls and green landscapes, with trail and weather notes shared beforehand.",
-      image: "https://images.unsplash.com/photo-1703566567802-e1945c83f0cb?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/waterfall-nature-outing.jpeg",
       icon: Waves,
     },
     {
       title: "Village & Culture",
       desc: "Respectful village walks and optional temple visits, with guidance on etiquette, dress and photography.",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/village-culture-walk.jpeg",
       icon: Landmark,
     },
     {
       title: "Tailor-Made Itinerary",
       desc: "Tell us your dates, pace and interests — we'll help shape a more personal village experience around them.",
-      image: "https://images.unsplash.com/photo-1509763988163-d54b5f5d5b67?w=1200&h=800&fit=crop&q=80",
+      image: "/experience-photos/tree-house.jpeg",
       icon: Sparkles,
     },
   ];
