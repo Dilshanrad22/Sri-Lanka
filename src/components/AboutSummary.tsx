@@ -29,8 +29,8 @@ export const AboutSummary = () => {
           <Reveal delay={0.1} className="w-full md:w-1/2">
             <div className="grain-texture relative rounded-3xl overflow-hidden shadow-xl shadow-black/30 border border-ivory/10 aspect-video md:aspect-square">
                <ImageWithFallback
-                src="/experience-photos/traditional-dancing-ceremony.jpeg"
-                alt="Sri Lankan Family"
+                src="/experience-photos/garden-pond-moments.jpeg"
+                alt="Guests enjoying the garden pond at Sigma House"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
