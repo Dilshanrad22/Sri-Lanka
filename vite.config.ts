@@ -3,9 +3,66 @@
   import react from '@vitejs/plugin-react-swc';
   import tailwindcss from '@tailwindcss/vite';
   import path from 'path';
+  import fs from 'fs';
+  import type { Plugin } from 'vite';
+  import {
+    DEFAULT_SITE_URL,
+    renderHeadTags,
+    renderRobots,
+    renderSitemap,
+    seoRoutes,
+  } from './src/seo';
+
+  // Fills <head> with per-route SEO tags and, on build, writes
+  // build/<route>/index.html for every route plus sitemap.xml and robots.txt,
+  // so search engines and link previews get the right tags without JavaScript.
+  const SEO_START = '<!-- seo:start -->';
+  const SEO_END = '<!-- seo:end -->';
+
+  function seoPages(): Plugin {
+    let siteUrl = DEFAULT_SITE_URL;
+    let natureKitchenUrl: string | undefined;
+    let outDir = '';
+    let isBuild = false;
+
+    const head = (route: (typeof seoRoutes)[number]) =>
+      `${SEO_START}
+    ${renderHeadTags(route, siteUrl, natureKitchenUrl)}
+    ${SEO_END}`;
+
+    return {
+      name: 'seo-pages',
+      configResolved(config) {
+        siteUrl = (config.env.VITE_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '');
+        natureKitchenUrl = config.env.VITE_NATURE_KITCHEN_URL || undefined;
+        outDir = path.resolve(config.root, config.build.outDir);
+        isBuild = config.command === 'build';
+      },
+      transformIndexHtml(html) {
+        return html.replace(/<!-- seo-head[^>]*-->/, head(seoRoutes[0]));
+      },
+      closeBundle() {
+        if (!isBuild) return;
+        const indexHtml = fs.readFileSync(path.join(outDir, 'index.html'), 'utf-8');
+        const start = indexHtml.indexOf(SEO_START);
+        const end = indexHtml.indexOf(SEO_END) + SEO_END.length;
+
+        for (const route of seoRoutes.slice(1)) {
+          const dir = path.join(outDir, route.path);
+          fs.mkdirSync(dir, { recursive: true });
+          fs.writeFileSync(
+            path.join(dir, 'index.html'),
+            indexHtml.slice(0, start) + head(route) + indexHtml.slice(end)
+          );
+        }
+        fs.writeFileSync(path.join(outDir, 'sitemap.xml'), renderSitemap(siteUrl));
+        fs.writeFileSync(path.join(outDir, 'robots.txt'), renderRobots(siteUrl));
+      },
+    };
+  }
 
   export default defineConfig({
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), seoPages()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {

@@ -1,6 +1,9 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 
+// Shown only once the Nature Kitchen site URL is configured (see src/seo.ts).
+const natureKitchenUrl = import.meta.env.VITE_NATURE_KITCHEN_URL;
+
 export const Footer = () => {
   return (
     <footer className="bg-stone-950 text-stone-400 py-16 border-t border-stone-900">
@@ -22,8 +25,13 @@ export const Footer = () => {
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li><a href="/about" className="hover:text-emerald-500 transition-colors">About Us</a></li>
-              <li><a href="/rooms" className="hover:text-emerald-500 transition-colors">Rooms & Pricing</a></li>
+              <li><a href="/accommodation" className="hover:text-emerald-500 transition-colors">Rooms & Pricing</a></li>
               <li><a href="/experiences" className="hover:text-emerald-500 transition-colors">Experiences</a></li>
+              <li><a href="/activities" className="hover:text-emerald-500 transition-colors">Activities & Volunteering</a></li>
+              <li><a href="/south-coast" className="hover:text-emerald-500 transition-colors">Down South Trips</a></li>
+              {natureKitchenUrl && (
+                <li><a href={natureKitchenUrl} className="hover:text-emerald-500 transition-colors">Cooking Class</a></li>
+              )}
               <li><a href="/gallery" className="hover:text-emerald-500 transition-colors">Gallery</a></li>
               <li><a href="/reviews" className="hover:text-emerald-500 transition-colors">Reviews</a></li>
             </ul>
