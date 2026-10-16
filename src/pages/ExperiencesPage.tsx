@@ -185,7 +185,7 @@ export const ExperiencesPage = () => {
           <Reveal>
             <p className="eyebrow mb-4">Explore</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory mb-6">
-              Authentic Local Experiences in Sri Lanka
+              Our Experiences
             </h1>
             <p className="text-lg md:text-xl text-ivory/70 max-w-2xl mx-auto mb-4">
               Authentic experiences that connect you with Sri Lankan culture and nature  on their own, or combined with your stay.

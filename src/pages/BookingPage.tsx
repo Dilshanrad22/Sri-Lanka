@@ -85,7 +85,7 @@ export const BookingPage = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         <Reveal className="text-center mb-16">
           <p className="eyebrow mb-4">Plan Your Stay</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Book Your Homestay in Sri Lanka</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Book Your Stay</h1>
           <p className="text-lg text-ivory/60">
             Fill out the form below or message us directly on WhatsApp. We'll confirm availability
             and the final price before anything is booked.

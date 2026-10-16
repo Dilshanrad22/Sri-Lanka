@@ -32,7 +32,7 @@ export const PackagesPage = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <Reveal className="text-center mb-12 max-w-3xl mx-auto">
           <p className="eyebrow mb-4">Plan Ahead</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Sri Lanka Village Stay Packages &amp; Itineraries</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Packages & Itineraries</h1>
           <p className="text-lg text-ivory/60">
             Flexible plans combining a village stay with cooking, nature, tea, cinnamon and culture.
             These are sample concepts, not final itineraries  day-by-day details, travel time and pricing

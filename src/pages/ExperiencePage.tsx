@@ -118,7 +118,7 @@ export const ExperiencePage = () => {
                         </div>
 
                         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory mb-6 leading-tight">
-                            Down South Adventures: Weligama, Ahangama &amp; Wildlife
+                            Local Experiences
                         </h1>
 
                         <p className="text-lg md:text-xl text-ivory/70 leading-relaxed max-w-2xl mx-auto">
