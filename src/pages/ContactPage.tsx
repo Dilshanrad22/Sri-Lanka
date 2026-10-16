@@ -9,7 +9,7 @@ export const ContactPage = () => {
         {/* Header */}
         <Reveal className="text-center mb-16">
           <p className="eyebrow mb-4">Get In Touch</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Contact Us</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Contact Sigma House in Kananke, near Galle</h1>
           <p className="text-lg text-ivory/60 max-w-2xl mx-auto">
             Have questions or want to plan your stay? Reach out to Hasitha, your host at Sigma House.
           </p>

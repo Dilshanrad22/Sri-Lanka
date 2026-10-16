@@ -16,10 +16,15 @@ export const Seo = () => {
 
   useEffect(() => {
     const route = findSeoRoute(pathname);
-    const url = absoluteUrl(siteUrl, route.path);
+    const url = absoluteUrl(siteUrl, route.noIndex ? pathname : route.path);
 
     document.title = route.title;
     setTag('meta[name="description"]', "content", route.description);
+    setTag(
+      'meta[name="robots"]',
+      "content",
+      route.noIndex ? "noindex, follow" : "index, follow, max-image-preview:large"
+    );
     setTag('link[rel="canonical"]', "href", url);
     setTag('meta[property="og:url"]', "content", url);
     setTag('meta[property="og:title"]', "content", route.title);

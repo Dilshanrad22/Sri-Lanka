@@ -21,20 +21,18 @@
 
   function seoPages(): Plugin {
     let siteUrl = DEFAULT_SITE_URL;
-    let natureKitchenUrl: string | undefined;
     let outDir = '';
     let isBuild = false;
 
     const head = (route: (typeof seoRoutes)[number]) =>
       `${SEO_START}
-    ${renderHeadTags(route, siteUrl, natureKitchenUrl)}
+    ${renderHeadTags(route, siteUrl)}
     ${SEO_END}`;
 
     return {
       name: 'seo-pages',
       configResolved(config) {
         siteUrl = (config.env.VITE_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, '');
-        natureKitchenUrl = config.env.VITE_NATURE_KITCHEN_URL || undefined;
         outDir = path.resolve(config.root, config.build.outDir);
         isBuild = config.command === 'build';
       },

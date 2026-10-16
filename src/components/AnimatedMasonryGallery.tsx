@@ -52,7 +52,7 @@ export const AnimatedMasonryGallery: React.FC<AnimatedMasonryGalleryProps> = ({ 
             >
               <ImageWithFallback
                 src={src}
-                alt={`Gallery image ${idx + 1}`}
+                alt={`${title ?? "Village life"} at Sigma House Sri Lanka, photo ${idx + 1}`}
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>

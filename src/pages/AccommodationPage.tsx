@@ -76,7 +76,7 @@ export const AccommodationPage = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory mb-6 leading-tight">
-              Sigma House - Tree House Accommodation
+              Tree House Homestay near Galle, Sri Lanka
             </h1>
 
             <p className="text-lg md:text-xl text-ivory/70 leading-relaxed max-w-2xl mx-auto">

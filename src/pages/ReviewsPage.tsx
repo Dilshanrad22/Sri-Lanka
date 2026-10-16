@@ -8,7 +8,7 @@ export const ReviewsPage = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         <Reveal className="text-center mb-16">
           <p className="eyebrow mb-4">Guest Stories</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Guest Stories</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Guest Stories from Our Sri Lanka Homestay</h1>
           <div className="flex items-center justify-center gap-2 mb-4">
             {[1, 2, 3, 4, 5].map((i) => (
               <Star key={i} className="fill-gold-light text-gold-light" size={32} />

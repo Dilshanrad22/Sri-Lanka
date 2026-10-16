@@ -10,6 +10,11 @@ export const Hero = () => {
     "/banner/banner2.jpeg",
     "/banner/banner3.jpeg",
   ];
+  const alts = [
+    "Guests relaxing with their host in the open-air hut at Sigma House, a village homestay in Sri Lanka",
+    "Children looking out over palm trees from the Sigma House tree house",
+    "A guest tea picking in a Sri Lankan tea garden",
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,7 +39,7 @@ export const Hero = () => {
         >
           <ImageWithFallback
             src={images[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
+            alt={alts[currentIndex]}
             className="w-full h-full object-cover"
           />
         </motion.div>
@@ -65,8 +70,8 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-display mb-6 text-4xl leading-tight md:text-6xl"
         >
-          Experience the Sri Lanka <br />
-          you came to discover.
+          A Village Homestay in Sri Lanka, <br />
+          Hosted by a Local Family
         </motion.h1>
 
         <motion.p
@@ -75,8 +80,8 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mb-12 max-w-2xl text-lg text-ivory/80 md:text-xl"
         >
-          Stay close to village life through home-style hospitality, garden ingredients,
-          traditional cooking, local culture and nature at <span className="text-gold-light">Sigma House</span>.
+          Experience the Sri Lanka you came to discover. Stay in our tree house homestay in Kananke, near Galle,
+          and share village life through authentic food, garden ingredients, local culture and nature at <span className="text-gold-light">Sigma House</span>.
         </motion.p>
 
         <motion.div

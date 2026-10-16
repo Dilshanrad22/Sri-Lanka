@@ -7,31 +7,42 @@
 //
 // Keyword split with the Nature Kitchen site: this site targets the stay,
 // homestay and village experiences. Cooking-class searches belong to
-// the Nature Kitchen site, which this site links to as a sub-brand.
+// the separate Nature Kitchen site.
 // Keep this file free of browser-only and Vite-only APIs.
 // ---------------------------------------------------------------------------
 
-// Current live URL. Set VITE_SITE_URL at build time once there is a custom
-// domain. Set VITE_NATURE_KITCHEN_URL to the Nature Kitchen site's URL to
-// link it from the footer and structured data; without it the link is left out.
-export const DEFAULT_SITE_URL = "https://sri-lanka-one.vercel.app";
+// Production domain. VITE_SITE_URL overrides it at build time (e.g. for a
+// preview deployment).
+export const DEFAULT_SITE_URL = "https://sigmahousesl.com";
 
 export const siteName = "Sigma House Sri Lanka";
 
 const defaultImage = {
-  path: "/images/Accomodation/room1.jpeg",
-  alt: "Sigma House tree house homestay surrounded by nature in Sri Lanka",
+  path: "/banner/banner1.jpeg",
+  alt: "Guests relaxing with their host in the open-air hut at Sigma House, a village homestay in Sri Lanka",
 };
 
-// Client keyword list (Oct 2026) is mapped to the page whose content
-// matches it. Google ignores the keywords meta tag, so each phrase also
-// appears in that page's title or description.
+// Client keyword list (Oct 2026), each phrase mapped to the page whose
+// content matches it:
+//   Homestay, Local Family, Authentic Experience/Foods, Village Life,
+//   Kananke, Galle, Down South, Tourism        -> site-wide + Home
+//   Tree House                                 -> Accommodation, Experiences
+//   Tea Picking, Cinnamon Making, Yoga, Village Walking,
+//   Cultural, Sri Lanka Traditions             -> Experiences, Activities
+//   Volunteering for Kids                      -> Activities
+//   Weligama, Ahangama, Wild Life              -> South coast
+//   Cooking Class                              -> Experiences (village cooking);
+//                                                 the class itself is the
+//                                                 Nature Kitchen site's keyword.
+// Google ignores the keywords meta tag, so every phrase is also used in that
+// page's title, description and visible heading.
 export const baseKeywords = [
   "Sigma House Sri Lanka",
   "homestay Sri Lanka",
   "Sri Lanka village life",
   "stay with a local family Sri Lanka",
   "authentic experience Sri Lanka",
+  "authentic Sri Lankan food",
   "local experience Sri Lanka",
   "Kananke",
   "Galle",
@@ -46,18 +57,19 @@ export type SeoRoute = {
   keywords: string[];
   priority: number;
   changeFrequency: "weekly" | "monthly" | "yearly";
+  noIndex?: boolean;
 };
 
 export const seoRoutes: SeoRoute[] = [
   {
     path: "/",
-    title: "Sigma House Sri Lanka | Authentic Village Stays & Local Experiences",
+    title: "Sigma House Sri Lanka | Authentic Village Homestay near Galle",
     description:
-      "Stay with a local family at our tree house homestay in Kananke, near Galle. Authentic Sri Lankan food, village life, tea picking, cinnamon making and cultural experiences down south.",
+      "Stay with a local family at our tree house homestay in Kananke, near Galle. Authentic Sri Lankan food, village life, tea picking, cinnamon making, yoga and cultural experiences down south.",
     keywords: [
       "Sri Lanka village stay",
+      "village homestay Sri Lanka",
       "tree house homestay Sri Lanka",
-      "authentic Sri Lankan food",
       "cultural experience Sri Lanka",
       "community-based tourism Sri Lanka",
     ],
@@ -75,31 +87,35 @@ export const seoRoutes: SeoRoute[] = [
       "homestay near Galle",
       "homestay Kananke",
       "Sri Lanka homestay with local food",
-      "authentic Sri Lankan food",
     ],
     priority: 0.9,
     changeFrequency: "monthly",
   },
   {
     path: "/experiences",
-    title: "Tea Picking, Village Walks & Cultural Experiences | Sigma House",
+    title: "Authentic Local Experiences in Sri Lanka | Sigma House",
     description:
-      "Authentic local experiences from our village homestay: tea picking, waterfall visits, village walking tours, traditional food, Sri Lankan New Year games and other Sri Lanka traditions.",
+      "Village cooking, cinnamon and spice garden, tea factory visit, waterfalls, village and culture walks, yoga in nature, tree house, cycling, paddy fields and temple visits from our homestay.",
     keywords: [
+      "local experiences Sri Lanka",
       "tea picking Sri Lanka",
       "Ceylon tea experience",
+      "cinnamon making Sri Lanka",
       "village walking tour Sri Lanka",
+      "yoga in nature Sri Lanka",
       "Sri Lanka traditions",
       "cultural experience Sri Lanka",
+      "temple visit Sri Lanka",
+      "village cycling tour Sri Lanka",
       "waterfall visit Sri Lanka",
-      "family activities Sri Lanka",
+      "village cooking Sri Lanka",
     ],
     priority: 0.9,
     changeFrequency: "monthly",
   },
   {
     path: "/activities",
-    title: "Volunteer with Village Kids, Yoga & Cinnamon Making | Sigma House",
+    title: "Volunteering with Village Kids, Yoga & Cinnamon Making | Sigma House",
     description:
       "Volunteer with village kids, join yoga and meditation, go village walking and try cinnamon making and tea picking. Hands-on activities with a local family in Sri Lanka.",
     keywords: [
@@ -119,7 +135,7 @@ export const seoRoutes: SeoRoute[] = [
     path: "/south-coast",
     title: "Down South Sri Lanka: Weligama, Ahangama & Wildlife | Sigma House",
     description:
-      "Explore down south from our homestay near Galle: surfing in Weligama and Ahangama, whale watching in Mirissa, wildlife safaris, turtle conservation and rainforest trekking.",
+      "Day trips down south from our homestay near Galle: surfing in Weligama and Ahangama, whale watching in Mirissa, wildlife safaris, turtle conservation and rainforest trekking.",
     keywords: [
       "Weligama",
       "Ahangama",
@@ -128,15 +144,56 @@ export const seoRoutes: SeoRoute[] = [
       "wildlife Sri Lanka",
       "wildlife safari Sri Lanka",
       "whale watching Mirissa",
-      "down south Sri Lanka",
       "Galle day trips",
     ],
     priority: 0.8,
     changeFrequency: "monthly",
   },
   {
+    path: "/packages",
+    title: "Sri Lanka Village Stay Packages & Itineraries | Sigma House",
+    description:
+      "Sample 2, 3, 5 and 7-day plans combining a village homestay with cooking, tea, cinnamon, nature and culture, with an optional extension down south to the south coast.",
+    keywords: [
+      "Sri Lanka village stay packages",
+      "Sri Lanka itinerary",
+      "Sri Lanka tour package",
+      "south coast Sri Lanka itinerary",
+    ],
+    priority: 0.8,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/transport",
+    title: "Transport & Rentals: Tuk-Tuk, Car, Van & Bike | Sigma House",
+    description:
+      "Getting around during your homestay in Kananke: tuk-tuk, car or van arrangements and bike or car rental for your local experiences and day trips down south.",
+    keywords: [
+      "tuk-tuk hire Sri Lanka",
+      "car and van hire Sri Lanka",
+      "bike rental Sri Lanka",
+      "transport Kananke",
+    ],
+    priority: 0.6,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/journal",
+    title: "Sri Lanka Travel Guides & Food Stories | Sigma House Journal",
+    description:
+      "Guides from Sigma House: what happens in a Sri Lankan cooking class, how Ceylon cinnamon is made, Sri Lankan food for beginners and planning a village stay in Sri Lanka.",
+    keywords: [
+      "Sri Lanka travel guide",
+      "Sri Lankan food for beginners",
+      "how Ceylon cinnamon is made",
+      "planning a village stay Sri Lanka",
+    ],
+    priority: 0.5,
+    changeFrequency: "weekly",
+  },
+  {
     path: "/about",
-    title: "About Sigma House | Local Family Homestay in Sri Lanka",
+    title: "About Sigma House | Local Family Homestay in Kananke, Sri Lanka",
     description:
       "Meet Hasitha and the local family behind Sigma House, a village homestay in Kananke where travellers share authentic food, Sri Lanka traditions and everyday village life.",
     keywords: ["local family homestay Sri Lanka", "family-run homestay Sri Lanka"],
@@ -154,9 +211,9 @@ export const seoRoutes: SeoRoute[] = [
   },
   {
     path: "/reviews",
-    title: "Guest Reviews | Sigma House Sri Lanka",
+    title: "Guest Stories & Reviews | Sigma House Sri Lanka",
     description:
-      "Read what guests say about staying with a local family at Sigma House Sri Lanka: the hosting, the authentic food, the village life and the nature down south.",
+      "Guest stories from Sigma House Sri Lanka and a link to our verified Google reviews from travellers who stayed with our local family.",
     keywords: ["Sigma House reviews"],
     priority: 0.6,
     changeFrequency: "monthly",
@@ -180,46 +237,31 @@ export const seoRoutes: SeoRoute[] = [
     changeFrequency: "yearly",
   },
   {
-    path: "/packages",
-    title: "Sri Lanka Village Stay Packages & Itineraries | Sigma House",
-    description:
-      "Sample 2, 3, 5 and 7 day itineraries combining a village homestay with cooking, cinnamon, tea and nature experiences near Galle, Sri Lanka.",
-    keywords: ["Sri Lanka village stay package", "Sri Lanka itinerary", "homestay itinerary Sri Lanka"],
-    priority: 0.7,
-    changeFrequency: "monthly",
-  },
-  {
-    path: "/transport",
-    title: "Transport & Rentals Near Galle, Sri Lanka | Sigma House",
-    description:
-      "Tuk-tuk, car and van transport options for getting around during your village homestay near Galle, Sri Lanka.",
-    keywords: ["tuk-tuk Sri Lanka", "transport Galle Sri Lanka", "car rental Sri Lanka"],
-    priority: 0.5,
-    changeFrequency: "monthly",
-  },
-  {
-    path: "/journal",
-    title: "Sri Lanka Travel Journal & Guides | Sigma House",
-    description:
-      "Sri Lanka guides, food stories and practical trip-planning notes from Sigma House, a village homestay near Galle.",
-    keywords: ["Sri Lanka travel guide", "Sri Lanka food guide"],
-    priority: 0.5,
-    changeFrequency: "monthly",
-  },
-  {
     path: "/policies",
-    title: "Policies | Sigma House Sri Lanka",
+    title: "Booking, Cancellation & Responsible Tourism Policies | Sigma House",
     description:
-      "Booking, cancellation, privacy and responsible tourism policies for a stay at Sigma House, a village homestay near Galle, Sri Lanka.",
-    keywords: ["Sigma House policies"],
+      "Booking and payment, cancellation and refunds, weather and safety, dietary needs, privacy and responsible tourism at Sigma House Sri Lanka.",
+    keywords: ["responsible tourism Sri Lanka"],
     priority: 0.3,
     changeFrequency: "yearly",
   },
 ];
 
+// Unknown paths get a non-indexable "not found" entry instead of copying
+// the home page's tags and canonical URL.
+export const notFoundRoute: SeoRoute = {
+  path: "/404",
+  title: "Page Not Found | Sigma House Sri Lanka",
+  description: seoRoutes[0].description,
+  keywords: [],
+  priority: 0,
+  changeFrequency: "yearly",
+  noIndex: true,
+};
+
 export function findSeoRoute(pathname: string) {
   const path = pathname.replace(/\/+$/, "") || "/";
-  return seoRoutes.find((r) => r.path === path) ?? seoRoutes[0];
+  return seoRoutes.find((r) => r.path === path) ?? notFoundRoute;
 }
 
 export function absoluteUrl(siteUrl: string, path: string) {
@@ -228,7 +270,7 @@ export function absoluteUrl(siteUrl: string, path: string) {
 
 // Site-wide structured data   only facts shown on the site. Add ratings or
 // reviews only once they are real and linked to their source.
-export function buildJsonLd(siteUrl: string, natureKitchenUrl?: string) {
+export function buildJsonLd(siteUrl: string) {
   return [
     {
       "@context": "https://schema.org",
@@ -247,18 +289,12 @@ export function buildJsonLd(siteUrl: string, natureKitchenUrl?: string) {
         addressRegion: "Southern Province",
         addressCountry: "LK",
       },
+      geo: { "@type": "GeoCoordinates", latitude: 6.042044, longitude: 80.402647 },
+      hasMap: "https://maps.app.goo.gl/yYRufBrzUXRY61Ea8",
       sameAs: [
         "https://www.instagram.com/sigmahouse_srilanka/",
         "https://www.facebook.com/61562298313608/",
       ],
-      ...(natureKitchenUrl && {
-        subOrganization: {
-          "@type": "LocalBusiness",
-          name: "Sigma House Nature Kitchen",
-          description: "Hands-on Sri Lankan village cooking experience by Sigma House.",
-          url: natureKitchenUrl,
-        },
-      }),
       knowsLanguage: "en",
     },
     {
@@ -277,17 +313,17 @@ const escapeAttr = (value: string) =>
   value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
 // <head> tags for one route, injected into index.html at build time.
-export function renderHeadTags(route: SeoRoute, siteUrl: string, natureKitchenUrl?: string) {
+export function renderHeadTags(route: SeoRoute, siteUrl: string) {
   const url = absoluteUrl(siteUrl, route.path);
   const image = `${siteUrl}${defaultImage.path}`;
   const keywords = [...route.keywords, ...baseKeywords].join(", ");
-  const jsonLd = JSON.stringify(buildJsonLd(siteUrl, natureKitchenUrl)).replace(/</g, "\\u003c");
+  const jsonLd = JSON.stringify(buildJsonLd(siteUrl)).replace(/</g, "\\u003c");
 
   return [
     `<title>${escapeAttr(route.title)}</title>`,
     `<meta name="description" content="${escapeAttr(route.description)}" />`,
     `<meta name="keywords" content="${escapeAttr(keywords)}" />`,
-    `<meta name="robots" content="index, follow, max-image-preview:large" />`,
+    `<meta name="robots" content="${route.noIndex ? "noindex, follow" : "index, follow, max-image-preview:large"}" />`,
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:type" content="website" />`,
     `<meta property="og:locale" content="en_GB" />`,
@@ -308,6 +344,7 @@ export function renderHeadTags(route: SeoRoute, siteUrl: string, natureKitchenUr
 export function renderSitemap(siteUrl: string) {
   const lastmod = new Date().toISOString();
   const urls = seoRoutes
+    .filter((r) => !r.noIndex)
     .map(
       (r) =>
         `  <url>\n    <loc>${absoluteUrl(siteUrl, r.path)}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${r.changeFrequency}</changefreq>\n    <priority>${r.priority}</priority>\n  </url>`

@@ -9,7 +9,7 @@ export const TransportPage = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <Reveal className="text-center mb-16 max-w-2xl mx-auto">
           <p className="eyebrow mb-4">Getting Around</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Transport & Rentals</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Transport &amp; Rentals: Tuk-Tuk, Car, Van &amp; Bike</h1>
           <p className="text-lg text-ivory/60">
             Getting around during your stay  tuk-tuk, car or van arrangements, and bike or car rental.
           </p>

@@ -47,7 +47,7 @@ export const AboutPage = () => {
                         </div>
 
                         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory mb-6 leading-tight">
-                            Our Story
+                            A Local Family Homestay in Kananke, Sri Lanka
                         </h1>
 
                         <p className="text-lg md:text-xl text-ivory/70 leading-relaxed max-w-2xl mx-auto">

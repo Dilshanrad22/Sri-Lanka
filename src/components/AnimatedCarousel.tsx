@@ -49,7 +49,7 @@ export const AnimatedCarousel: React.FC<AnimatedCarouselProps> = ({ media, title
                 {item.type === "image" ? (
                   <ImageWithFallback
                     src={item.src}
-                    alt={`Slide ${idx + 1}`}
+                    alt={`${title ?? "Sigma House homestay"} at Sigma House Sri Lanka, photo ${idx + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (

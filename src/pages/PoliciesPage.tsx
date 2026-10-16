@@ -34,7 +34,7 @@ export const PoliciesPage = () => {
       <div className="container mx-auto px-6 max-w-3xl">
         <Reveal className="text-center mb-12">
           <p className="eyebrow mb-4">Good To Know</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory">Policies</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory">Booking &amp; Responsible Tourism Policies</h1>
         </Reveal>
 
         <Reveal className="bg-gold/10 border border-gold-light/30 text-ivory/70 rounded-2xl px-6 py-4 text-sm text-center mb-12">

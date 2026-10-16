@@ -1,9 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
-// Shown only once the Nature Kitchen site URL is configured (see src/seo.ts).
-const natureKitchenUrl = import.meta.env.VITE_NATURE_KITCHEN_URL;
-
 export const Footer = () => {
   return (
     <footer className="grain-texture bg-forest text-ivory">
@@ -34,9 +31,6 @@ export const Footer = () => {
               <li><a href="/experiences" className="hover:text-gold-light transition-colors">Experiences</a></li>
               <li><a href="/activities" className="hover:text-gold-light transition-colors">Activities & Volunteering</a></li>
               <li><a href="/south-coast" className="hover:text-gold-light transition-colors">Down South Trips</a></li>
-              {natureKitchenUrl && (
-                <li><a href={natureKitchenUrl} target="_blank" rel="noreferrer" className="hover:text-gold-light transition-colors">Cooking Class</a></li>
-              )}
               <li><a href="/packages" className="hover:text-gold-light transition-colors">Packages & Itineraries</a></li>
               <li><a href="/transport" className="hover:text-gold-light transition-colors">Transport & Rentals</a></li>
               <li><a href="/journal" className="hover:text-gold-light transition-colors">Journal</a></li>

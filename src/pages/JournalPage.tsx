@@ -31,7 +31,7 @@ export const JournalPage = () => {
       <div className="container mx-auto px-6 max-w-5xl">
         <Reveal className="text-center mb-16 max-w-2xl mx-auto">
           <p className="eyebrow mb-4">Stories & Guides</p>
-          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Journal</h1>
+          <h1 className="font-display text-4xl md:text-5xl text-ivory mb-6">Sri Lanka Travel Guides &amp; Food Stories</h1>
           <p className="text-lg text-ivory/60">
             Sri Lanka guides, food stories and practical trip-planning notes from Sigma House.
           </p>
