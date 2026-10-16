@@ -70,8 +70,8 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-display mb-6 text-4xl leading-tight md:text-6xl"
         >
-          A Village Homestay in Sri Lanka, <br />
-          Hosted by a Local Family
+          Experience the Sri Lanka <br />
+          you came to discover.
         </motion.h1>
 
         <motion.p
@@ -80,8 +80,8 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mb-12 max-w-2xl text-lg text-ivory/80 md:text-xl"
         >
-          Experience the Sri Lanka you came to discover. Stay in our tree house homestay in Kananke, near Galle,
-          and share village life through authentic food, garden ingredients, local culture and nature at <span className="text-gold-light">Sigma House</span>.
+          Stay close to village life through home-style hospitality, garden ingredients,
+          traditional cooking, local culture and nature at <span className="text-gold-light">Sigma House</span>.
         </motion.p>
 
         <motion.div
